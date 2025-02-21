@@ -6,12 +6,15 @@ namespace Transparency
     public partial class Grid : Node2D
     {
         private Cell[,] _cells = null;
-        [Export] private int _cellWidth = 16;
-        [Export] private int _cellHeight = 16;
+        [Export] private int _cellWidth = 32;
+        [Export] private int _cellHeight = 32;
         [Export] private int _width = 16;
         [Export] private int _height = 16;
         public int Height {get {return _height;}}
         public int Width {get {return _width;}}
+
+        public int CellHeight {get {return _cellHeight;}}
+        public int CellWidth {get {return _cellWidth;}}
         public override void _Ready()
         {
             _cells = new Cell[_width,_height];
