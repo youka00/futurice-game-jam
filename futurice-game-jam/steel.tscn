@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://dihdgds20lsjg"]
 
 [ext_resource type="Texture2D" uid="uid://crs4yhv4wqb3k" path="res://game_atlas.png" id="1_tgw8c"]
-[ext_resource type="Script" path="res://Scripts/Rock.cs" id="2_37h5h"]
+[ext_resource type="Script" path="res://Scripts/Steel.cs" id="2_rrap0"]
 
 [node name="Steel" type="Sprite2D"]
 z_index = 1
@@ -9,4 +9,4 @@ texture = ExtResource("1_tgw8c")
 hframes = 4
 vframes = 2
 frame = 7
-script = ExtResource("2_37h5h")
+script = ExtResource("2_rrap0")
