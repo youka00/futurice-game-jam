@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://ckx5a2yjpyggc"]
+
+[ext_resource type="Texture2D" uid="uid://36g155tesp0h" path="res://Art/glow.png" id="1_o08oi"]
+[ext_resource type="Script" path="res://Scripts/YellowLight.cs" id="2_3e5ma"]
+
+[node name="Yellow Light" type="Sprite2D"]
+texture = ExtResource("1_o08oi")
+script = ExtResource("2_3e5ma")
