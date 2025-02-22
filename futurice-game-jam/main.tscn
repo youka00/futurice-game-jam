@@ -10,3 +10,5 @@ script = ExtResource("1_c8d43")
 [node name="Grid" parent="." instance=ExtResource("2_07w3t")]
 
 [node name="PlayerArea" parent="." instance=ExtResource("3_ondpg")]
+
+[node name="Camera2D" type="Camera2D" parent="."]
