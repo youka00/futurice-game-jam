@@ -4,6 +4,5 @@
 [ext_resource type="Script" path="res://Scripts/Rock.cs" id="2_skl7e"]
 
 [node name="Rock" type="Sprite2D"]
-z_index = 1
 texture = ExtResource("1_onl4q")
 script = ExtResource("2_skl7e")
