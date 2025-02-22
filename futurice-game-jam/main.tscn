@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=4 uid="uid://ctq0mblonc2ae"]
+[gd_scene load_steps=9 format=4 uid="uid://ctq0mblonc2ae"]
 
 [ext_resource type="Script" path="res://Scripts/Level.cs" id="1_c8d43"]
 [ext_resource type="PackedScene" uid="uid://dat4qrb2p7qb0" path="res://grid.tscn" id="2_07w3t"]
 [ext_resource type="Texture2D" uid="uid://crs4yhv4wqb3k" path="res://game_atlas.png" id="2_b6qt0"]
 [ext_resource type="PackedScene" uid="uid://crr2ap0ngx2fn" path="res://player.tscn" id="3_ondpg"]
 [ext_resource type="PackedScene" uid="uid://ce3ioxnjy7gqj" path="res://esc.tscn" id="4_bfrit"]
+[ext_resource type="PackedScene" uid="uid://dsqjxre4sux3d" path="res://ambience.tscn" id="6_pvnwa"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_378xu"]
 texture = ExtResource("2_b6qt0")
@@ -40,3 +41,5 @@ offset = Vector2(120, 128)
 
 [node name="esc" parent="." instance=ExtResource("4_bfrit")]
 position = Vector2(223, -17)
+
+[node name="Ambience" parent="." instance=ExtResource("6_pvnwa")]

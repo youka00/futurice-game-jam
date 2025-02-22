@@ -1,4 +1,9 @@
-[gd_scene format=3 uid="uid://dsqjxre4sux3d"]
+[gd_scene load_steps=3 format=3 uid="uid://dsqjxre4sux3d"]
+
+[ext_resource type="AudioStream" uid="uid://bgjyc2ht1ofub" path="res://Music/graverobber's curse.ogg" id="1_kn3xq"]
+[ext_resource type="Script" path="res://Scripts/Ambience.cs" id="2_ab1wv"]
 
 [node name="Ambience" type="AudioStreamPlayer"]
+stream = ExtResource("1_kn3xq")
 autoplay = true
+script = ExtResource("2_ab1wv")
