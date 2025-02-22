@@ -1,16 +1,16 @@
 [gd_scene load_steps=4 format=3 uid="uid://crr2ap0ngx2fn"]
 
-[ext_resource type="Texture2D" uid="uid://cquy654v8amy3" path="res://icon.svg" id="1_a3vbh"]
 [ext_resource type="Script" path="res://Scripts/Player.cs" id="1_lqis4"]
+[ext_resource type="Texture2D" uid="uid://bjlmxb3yxgqp" path="res://player.png" id="2_swu0k"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_r2std"]
-radius = 74.0
+radius = 16.0
 
 [node name="PlayerArea" type="Area2D"]
 script = ExtResource("1_lqis4")
 
 [node name="Player" type="Sprite2D" parent="."]
-texture = ExtResource("1_a3vbh")
+texture = ExtResource("2_swu0k")
 
 [node name="PlayerCollision" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_r2std")
