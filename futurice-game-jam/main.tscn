@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=4 uid="uid://ctq0mblonc2ae"]
+[gd_scene load_steps=11 format=4 uid="uid://ctq0mblonc2ae"]
 
 [ext_resource type="Script" path="res://Scripts/Level.cs" id="1_c8d43"]
 [ext_resource type="PackedScene" uid="uid://dat4qrb2p7qb0" path="res://grid.tscn" id="2_07w3t"]
@@ -6,6 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://crr2ap0ngx2fn" path="res://player.tscn" id="3_ondpg"]
 [ext_resource type="PackedScene" uid="uid://ce3ioxnjy7gqj" path="res://esc.tscn" id="4_bfrit"]
 [ext_resource type="PackedScene" uid="uid://dsqjxre4sux3d" path="res://ambience.tscn" id="6_pvnwa"]
+[ext_resource type="PackedScene" uid="uid://g8gjrbb3fipq" path="res://loss.tscn" id="7_fauax"]
+[ext_resource type="PackedScene" uid="uid://b3pr345ss1l5l" path="res://win.tscn" id="8_vhbo0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_378xu"]
 texture = ExtResource("2_b6qt0")
@@ -23,8 +25,9 @@ texture_region_size = Vector2i(32, 32)
 tile_size = Vector2i(32, 32)
 sources/1 = SubResource("TileSetAtlasSource_378xu")
 
-[node name="Main" type="Node2D"]
+[node name="Main" type="Node2D" node_paths=PackedStringArray("_ambience")]
 script = ExtResource("1_c8d43")
+_ambience = NodePath("Ambience")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 z_index = -1
@@ -43,3 +46,7 @@ offset = Vector2(120, 128)
 position = Vector2(223, -17)
 
 [node name="Ambience" parent="." instance=ExtResource("6_pvnwa")]
+
+[node name="Loss" parent="." instance=ExtResource("7_fauax")]
+
+[node name="Win" parent="." instance=ExtResource("8_vhbo0")]
