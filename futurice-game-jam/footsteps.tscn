@@ -1,3 +1,6 @@
-[gd_scene format=3 uid="uid://db8thc4jamb0a"]
+[gd_scene load_steps=2 format=3 uid="uid://db8thc4jamb0a"]
+
+[ext_resource type="AudioStream" uid="uid://dfp8uu28rt62v" path="res://Music/walk.ogg" id="1_prsmv"]
 
 [node name="Footsteps" type="AudioStreamPlayer"]
+stream = ExtResource("1_prsmv")
