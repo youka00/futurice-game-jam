@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bgjyc2ht1ofub"
+path="res://.godot/imported/graverobber's curse.ogg-4538a25e1b53f6aaf26ffc8b1b284d5b.oggvorbisstr"
+
+[deps]
+
+source_file="res://Music/graverobber's curse.ogg"
+dest_files=["res://.godot/imported/graverobber's curse.ogg-4538a25e1b53f6aaf26ffc8b1b284d5b.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

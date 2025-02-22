@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://db8thc4jamb0a"]
+
+[node name="Footsteps" type="AudioStreamPlayer"]

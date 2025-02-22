@@ -15,6 +15,7 @@ namespace Transparency
         private string _cellScenePath = "res://cell.tscn";
         private string _rockScene = "res://rock.tscn";
         private string _steelScene = "res://steel.tscn";
+        private string _redDiamondScene = "res://red_diamond.tscn";
         private Cell[,] _cells = null;
         public Cell[,] Cells {get {return _cells;}}
         [Export] private int _cellWidth = 32;
@@ -48,6 +49,10 @@ namespace Transparency
             {
                 CreateOccupier(OccupierScene.Steel, GetRandomFreeCell());
             }
+            for (int i = 0; i < 3; i++)
+            {
+                CreateOccupier(OccupierScene.Diamond, GetRandomFreeCell());
+            }
             int amount = _freeCells.Count;
             for (int i = 0; i < amount; i++)
             {
@@ -79,6 +84,12 @@ namespace Transparency
                 cell.Occupiers.Add(steel);
                 cell.Collidable = true;
                 _freeCells.Remove(cell);
+                break;
+                case OccupierScene.Diamond:
+                scene = ResourceLoader.Load<PackedScene>(_redDiamondScene);
+                RedDiamond redDiamond = scene.Instantiate<RedDiamond>();
+                cell.AddChild(redDiamond);
+                cell.Occupiers.Add(redDiamond);
                 break;
             }
         }
