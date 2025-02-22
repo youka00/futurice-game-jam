@@ -3,11 +3,12 @@ using System;
 
 namespace Transparency
 {
-    public partial class YellowLight : Light
+    public partial class RedLight : Light
     {
         // Called when the node enters the scene tree for the first time.
         public override void _Ready()
         {
+            LightColor = Color.Red;
         }
 
         // Called every frame. 'delta' is the elapsed time since the previous frame.

@@ -4,15 +4,8 @@ namespace Transparency
 {
     public abstract partial class Light : Sprite2D
     {
-        public enum Color
-        {
-            None = 0,
-            Red,
-            Green,
-            Blue
-        }
         [Export] private Color _color = Color.None;
-        public Color LightColor {get {return _color;}}
+        public Color LightColor {get {return _color;} set {_color = value;}}
         private Vector2I _gridPosition = Vector2I.Zero;
         public Vector2I GridPosition{get {return _gridPosition;} set {_gridPosition = value;}}
         private Vector2I[] _affectedArea = new Vector2I[9];
@@ -59,6 +52,10 @@ namespace Transparency
                 else
                 {
                     Cell cell = Level.Current.CurrentGrid.Cells[collision.X, collision.Y];
+                    foreach (Occupier j in cell.Occupiers)
+                    {
+                        j.LightCollision(_color);
+                    }
                 }
             }
         }
@@ -73,6 +70,10 @@ namespace Transparency
                 else
                 {
                     Cell cell = Level.Current.CurrentGrid.Cells[collision.X, collision.Y];
+                    foreach (Occupier j in cell.Occupiers)
+                    {
+                        j.RemoveLight();
+                    }
                 }
 
             }

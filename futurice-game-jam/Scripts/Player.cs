@@ -3,11 +3,16 @@ using System;
 
 namespace Transparency
 {
-    public partial class Player : Area2D
+    public partial class Player : Area2D, Occupier
     {
         [Export] private float _speed = 20;
         private Vector2I _gridPosition = Vector2I.Zero;
         public Vector2I GridPosition{get {return _gridPosition;} set {_gridPosition = value;}}
+
+        public CellOccupierType Type => CellOccupierType.Player;
+
+        public Color AffectedByColor => Color.None;
+
         public enum Direction
         {
             None = 0,
