@@ -67,5 +67,15 @@ namespace Transparency
             }
             return Level.Current.CurrentGrid.Cells[gridposition.X, gridposition.Y].Collidable;;
         }
+        public void CollideWith(Occupier occupier)
+        {
+            switch (occupier.Type)
+            {
+                case CellOccupierType.Collectable: break;
+                case CellOccupierType.Ghost: break;
+                case CellOccupierType.Mineable: break;
+                case CellOccupierType.Obstacle: break;
+            }
+        }
     }
 }
