@@ -6,6 +6,8 @@ namespace Transparency
     public partial class Player : Area2D
     {
         [Export] private float _speed = 20;
+        private Vector2I _gridPosition = Vector2I.Zero;
+        public Vector2I GridPosition{get {return _gridPosition;} set {_gridPosition = value;}}
         public enum Direction
         {
             None = 0,
@@ -17,39 +19,48 @@ namespace Transparency
         // Called when the node enters the scene tree for the first time.
         public override void _Ready()
         {
-
+            
         }
 
         // Called every frame. 'delta' is the elapsed time since the previous frame.
         public override void _Process(double delta)
         {
-            Vector2 direction = ReadInput();
-            Move(direction);
+            ReadInput();
         }
-        private Vector2 ReadInput()
+        private void ReadInput()
         {
-            Vector2 direction = Vector2.Zero;
             if (Input.IsActionJustPressed("MoveUp"))
             {
-                return Vector2.Up;
+                Move(Vector2I.Up);
             }
             if (Input.IsActionJustPressed("MoveDown"))
             {
-                return Vector2.Down;
+                Move(Vector2I.Down);
             }
             if (Input.IsActionJustPressed("MoveLeft"))
             {
-                return Vector2.Left;
+                Move(Vector2I.Left);
             }
             if (Input.IsActionJustPressed("MoveRight"))
             {
-                return Vector2.Right;
+                Move(Vector2I.Right);
             }
-            return direction;
         }
-        private void Move(Vector2 direction)
+        private void Move(Vector2I direction)
         {
-            GlobalPosition += direction * Level.Current.CurrentGrid.CellHeight;
+            if (!CheckCollision(_gridPosition + direction))
+            {
+                GlobalPosition += direction * Level.Current.CurrentGrid.CellHeight;
+                _gridPosition += direction;
+            }
+        }
+        private bool CheckCollision(Vector2I gridposition)
+        {
+            if (gridposition.X < 0 || gridposition.Y < 0 || gridposition.X > Level.Current.CurrentGrid.Width - 1 || gridposition.Y > Level.Current.CurrentGrid.Height - 1)
+            {
+                return true;
+            }
+            return Level.Current.CurrentGrid.Cells[gridposition.X, gridposition.Y].Collidable;;
         }
     }
 }

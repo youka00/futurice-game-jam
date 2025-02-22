@@ -6,6 +6,7 @@ namespace Transparency
     public partial class Grid : Node2D
     {
         private Cell[,] _cells = null;
+        public Cell[,] Cells {get {return _cells;}}
         [Export] private int _cellWidth = 32;
         [Export] private int _cellHeight = 32;
         [Export] private int _width = 16;
@@ -26,7 +27,6 @@ namespace Transparency
                     _cells[i, j] = GetChild(l, false) as Cell;
                     _cells[i, j].GridPosition = new Vector2I(i, j);
                     _cells[i, j].GlobalPosition = new Vector2I(i * _cellWidth, j * _cellHeight);
-                    l++;
                 }
             }
         }
