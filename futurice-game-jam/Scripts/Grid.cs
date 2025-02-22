@@ -26,9 +26,11 @@ namespace Transparency
                 {
                     _cells[i, j] = GetChild(l, false) as Cell;
                     _cells[i, j].GridPosition = new Vector2I(i, j);
-                    _cells[i, j].GlobalPosition = new Vector2I(i * _cellWidth, j * _cellHeight);
+                    _cells[i, j].Position = new Vector2I(i * _cellWidth, j * _cellHeight);
+                    _cells[i, j].CreateOccupier(OccupierScene.Rock);
                 }
             }
+            GD.Print(_cells.Length);
         }
     }
 }
