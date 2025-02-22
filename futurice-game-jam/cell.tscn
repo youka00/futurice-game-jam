@@ -1,8 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://dn4ac1rm460df"]
+[gd_scene load_steps=2 format=3 uid="uid://d3nsxrobnscua"]
 
-[ext_resource type="Texture2D" uid="uid://4tv2qxjqntdb" path="res://muta.png" id="1_otoq1"]
 [ext_resource type="Script" path="res://Scripts/Cell.cs" id="2_ma7jt"]
 
-[node name="Cell" type="Sprite2D"]
-texture = ExtResource("1_otoq1")
+[node name="Cell" type="Node2D"]
 script = ExtResource("2_ma7jt")

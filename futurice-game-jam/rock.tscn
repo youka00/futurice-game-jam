@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://85bvguyw28rs"]
+
+[ext_resource type="Texture2D" uid="uid://ch6ejuajbdsc" path="res://Art/rock.png" id="1_onl4q"]
+[ext_resource type="Script" path="res://Scripts/Rock.cs" id="2_skl7e"]
+
+[node name="Rock" type="Sprite2D"]
+z_index = 1
+texture = ExtResource("1_onl4q")
+script = ExtResource("2_skl7e")
