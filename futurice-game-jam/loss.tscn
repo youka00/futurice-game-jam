@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://g8gjrbb3fipq"]
+
+[ext_resource type="AudioStream" uid="uid://hojrneo7dmw7" path="res://Music/graverobber_lose.ogg" id="1_rq1de"]
+[ext_resource type="Script" path="res://Scripts/Loss.cs" id="2_yslhl"]
+
+[node name="Loss" type="AudioStreamPlayer"]
+stream = ExtResource("1_rq1de")
+script = ExtResource("2_yslhl")

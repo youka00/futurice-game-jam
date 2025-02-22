@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://b3pr345ss1l5l"]
+
+[ext_resource type="AudioStream" uid="uid://dx8jgrlcxsbrw" path="res://Music/graverobber_win.ogg" id="1_28td0"]
+[ext_resource type="Script" path="res://Scripts/Win.cs" id="2_2jmo3"]
+
+[node name="Win" type="AudioStreamPlayer"]
+stream = ExtResource("1_28td0")
+script = ExtResource("2_2jmo3")
