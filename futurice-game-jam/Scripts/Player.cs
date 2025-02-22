@@ -18,6 +18,7 @@ namespace Transparency
         private PackedScene _redScene = null;
         private PackedScene _greenScene = null;
         private PackedScene _blueScene = null;
+        private Light _light = null;
 
         public enum Direction
         {
@@ -57,6 +58,70 @@ namespace Transparency
             if (Input.IsActionJustPressed("MoveRight"))
             {
                 Move(Vector2I.Right);
+            }
+            if (Input.IsActionJustPressed("Red"))
+            {
+                if (_light != null)
+                {
+                    _light.RemoveLightCollision();
+                    _light.QueueFree();
+                    _light = null;
+                    _light = _redScene.Instantiate<RedLight>();
+                    AddChild(_light);
+                    _light.Position = Vector2.Zero;
+                    _light.SetAffectedArea(_gridPosition);
+                }
+                else if (_light is RedLight)
+                {}
+                else
+                {
+                    _light = _redScene.Instantiate<RedLight>();
+                    AddChild(_light);
+                    _light.Position = Vector2.Zero;
+                    _light.SetAffectedArea(_gridPosition);
+                }
+            }
+            if (Input.IsActionJustPressed("Green"))
+            {
+                if (_light != null)
+                {
+                    _light.RemoveLightCollision();
+                    _light.QueueFree();
+                    _light = null;
+                    _light = _greenScene.Instantiate<GreenLight>();
+                    AddChild(_light);
+                    _light.Position = Vector2.Zero;
+                    _light.SetAffectedArea(_gridPosition);
+                }
+                else if (_light is GreenLight)
+                {}
+                else
+                {
+                    _light = _greenScene.Instantiate<GreenLight>();
+                    AddChild(_light);
+                    _light.Position = Vector2.Zero;
+                    _light.SetAffectedArea(_gridPosition);
+                }
+            }
+            if (Input.IsActionJustPressed("Blue"))
+            {
+                if (_light != null)
+                {
+                    _light.RemoveLightCollision();
+                    _light.QueueFree();
+                    _light = null;
+                    _light = _blueScene.Instantiate<BlueLight>();
+                    AddChild(_light);
+                    _light.SetAffectedArea(_gridPosition);
+                }
+                else if (_light is BlueLight)
+                {}
+                else
+                {
+                    _light = _blueScene.Instantiate<BlueLight>();
+                    AddChild(_light);
+                    _light.SetAffectedArea(_gridPosition);
+                }
             }
         }
         private void Move(Vector2I direction)
