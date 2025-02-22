@@ -1,23 +1,24 @@
 [gd_scene load_steps=4 format=3 uid="uid://bi3ocurdyxrk2"]
 
 [ext_resource type="Script" path="res://Scripts/HaamuMovement.cs" id="1_2qxj8"]
-[ext_resource type="Texture2D" uid="uid://cacy6oobdqs0n" path="res://haamu4.png" id="2_6qy0w"]
+[ext_resource type="Texture2D" uid="uid://brxle1sbt4vi7" path="res://haamu4.png" id="2_6qy0w"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ecglp"]
-radius = 62.6099
+radius = 17.0294
 
 [node name="haamu" type="Node2D"]
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+z_index = 3
 script = ExtResource("1_2qxj8")
 LeftLimit = -5.0
 RightLimit = 5.0
 
 [node name="Haamu4" type="Sprite2D" parent="CharacterBody2D"]
-position = Vector2(331, 225)
-scale = Vector2(3.375, 3.4375)
+scale = Vector2(1, 1.019)
 texture = ExtResource("2_6qy0w")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
-position = Vector2(329, 223)
 shape = SubResource("CircleShape2D_ecglp")
+
+[node name="Camera2D" type="Camera2D" parent="."]
