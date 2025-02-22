@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dng7py22ms7mu"]
+
+[ext_resource type="AudioStream" uid="uid://cflkvy36xe24r" path="res://Music/break_stone.ogg" id="1_hb6i5"]
+
+[node name="Break Stone" type="AudioStreamPlayer"]
+stream = ExtResource("1_hb6i5")
