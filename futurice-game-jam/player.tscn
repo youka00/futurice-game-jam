@@ -1,8 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://crr2ap0ngx2fn"]
+[gd_scene load_steps=4 format=3 uid="uid://crr2ap0ngx2fn"]
 
 [ext_resource type="Script" path="res://Scripts/Player.cs" id="1_lqis4"]
 [ext_resource type="Texture2D" uid="uid://bjlmxb3yxgqp" path="res://player.png" id="2_swu0k"]
-[ext_resource type="PackedScene" uid="uid://ckx5a2yjpyggc" path="res://red_light.tscn" id="3_pw5cl"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_r2std"]
 radius = 16.0
@@ -15,5 +14,3 @@ texture = ExtResource("2_swu0k")
 
 [node name="PlayerCollision" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_r2std")
-
-[node name="Red Light" parent="." instance=ExtResource("3_pw5cl")]
