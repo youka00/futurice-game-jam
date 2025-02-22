@@ -28,6 +28,7 @@ namespace Transparency
                 for (int j = -1; j < 2; j++)
                 {
                     _affectedArea[l] = new Vector2I(i + gridPosition.X, j + gridPosition.Y);
+                    l++;
                 }
             }
             CheckLightCollision();
