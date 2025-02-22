@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://ckx5a2yjpyggc"]
+
+[ext_resource type="Texture2D" uid="uid://36g155tesp0h" path="res://Art/glow.png" id="1_ralim"]
+[ext_resource type="Script" path="res://Scripts/RedLight.cs" id="2_deta3"]
+
+[node name="Red Light" type="Sprite2D"]
+modulate = Color(1, 0.027451, 0.164706, 1)
+texture = ExtResource("1_ralim")
+script = ExtResource("2_deta3")
