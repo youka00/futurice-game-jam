@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://c8kfh0yh4mham"]
+
+[ext_resource type="Texture2D" uid="uid://bstcexrvjdjns" path="res://Art/player1.png" id="1_u8o3b"]
+[ext_resource type="Script" path="res://Scripts/RedDiamond.cs" id="2_r5s3g"]
+
+[node name="Green Diamond" type="Sprite2D"]
+modulate = Color(1, 0.0431373, 0.0784314, 1)
+z_index = 1
+texture = ExtResource("1_u8o3b")
+script = ExtResource("2_r5s3g")

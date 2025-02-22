@@ -8,6 +8,7 @@ namespace Transparency
         public static Level Current = null;
         private Grid _grid = null;
         public Grid CurrentGrid {get {return _grid;}}
+        [Export] private Ambience _ambience = null;
         public Level()
         {
             Current = this;
@@ -16,11 +17,21 @@ namespace Transparency
         public override void _Ready()
         {
             _grid = GetNode<Grid>("Grid");
+            _ambience = GetNode<Ambience>("Ambience");
+            _ambience.Play();
         }
 
         // Called every frame. 'delta' is the elapsed time since the previous frame.
         public override void _Process(double delta)
         {
+        }
+        public void Win()
+        {
+            _ambience.Stop();
+        }
+        public void Lose()
+        {
+            _ambience.Stop();
         }
     }
 }

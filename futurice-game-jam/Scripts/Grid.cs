@@ -8,7 +8,9 @@ namespace Transparency
     {
         Rock,
         Steel,
-        Diamond
+        RedDiamond,
+        GreenDiamond,
+        BlueDiamond
     }
     public partial class Grid : Node2D
     {
@@ -16,6 +18,8 @@ namespace Transparency
         private string _rockScene = "res://rock.tscn";
         private string _steelScene = "res://steel.tscn";
         private string _redDiamondScene = "res://red_diamond.tscn";
+        private string _greenDiamondScene = "res://green_diamond.tscn";
+        private string _blueDiamondScene = "res://blue_diamond.tscn";
         private Cell[,] _cells = null;
         public Cell[,] Cells {get {return _cells;}}
         [Export] private int _cellWidth = 32;
@@ -49,10 +53,9 @@ namespace Transparency
             {
                 CreateOccupier(OccupierScene.Steel, GetRandomFreeCell());
             }
-            for (int i = 0; i < _freeCells.Count; i++)
-            {
-                CreateOccupier(OccupierScene.Diamond, GetRandomFreeCell());
-            }
+            CreateOccupier(OccupierScene.BlueDiamond, GetRandomFreeCell());
+            CreateOccupier(OccupierScene.RedDiamond, GetRandomFreeCell());
+            CreateOccupier(OccupierScene.GreenDiamond, GetRandomFreeCell());
             int amount = _freeCells.Count;
             for (int i = 0; i < amount; i++)
             {
@@ -85,11 +88,23 @@ namespace Transparency
                 cell.Collidable = true;
                 _freeCells.Remove(cell);
                 break;
-                case OccupierScene.Diamond:
+                case OccupierScene.RedDiamond:
                 scene = ResourceLoader.Load<PackedScene>(_redDiamondScene);
                 RedDiamond redDiamond = scene.Instantiate<RedDiamond>();
                 cell.AddChild(redDiamond);
                 cell.Occupiers.Add(redDiamond);
+                break;
+                case OccupierScene.GreenDiamond:
+                scene = ResourceLoader.Load<PackedScene>(_greenDiamondScene);
+                GreenDiamond greenDiamond = scene.Instantiate<GreenDiamond>();
+                cell.AddChild(greenDiamond);
+                cell.Occupiers.Add(greenDiamond);
+                break;
+                case OccupierScene.BlueDiamond:
+                scene = ResourceLoader.Load<PackedScene>(_blueDiamondScene);
+                BlueDiamond blueDiamond = scene.Instantiate<BlueDiamond>();
+                cell.AddChild(blueDiamond);
+                cell.Occupiers.Add(blueDiamond);
                 break;
             }
         }
