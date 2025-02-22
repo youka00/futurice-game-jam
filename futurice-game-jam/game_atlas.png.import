@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://rjbn8s8j0xcj"
-path="res://.godot/imported/haamu2.png-a74325eba009728706b68c5586828a90.ctex"
+uid="uid://crs4yhv4wqb3k"
+path="res://.godot/imported/game_atlas.png-a636fe48e072f1185de4d891dc2e9e36.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/haamu2.png"
-dest_files=["res://.godot/imported/haamu2.png-a74325eba009728706b68c5586828a90.ctex"]
+source_file="res://game_atlas.png"
+dest_files=["res://.godot/imported/game_atlas.png-a636fe48e072f1185de4d891dc2e9e36.ctex"]
 
 [params]
 

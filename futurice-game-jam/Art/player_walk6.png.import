@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://rjbn8s8j0xcj"
-path="res://.godot/imported/haamu2.png-a74325eba009728706b68c5586828a90.ctex"
+uid="uid://bj25d6vtns8t1"
+path="res://.godot/imported/player_walk6.png-10d972bc80f09302f0e3170e6e44c17b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/haamu2.png"
-dest_files=["res://.godot/imported/haamu2.png-a74325eba009728706b68c5586828a90.ctex"]
+source_file="res://Art/player_walk6.png"
+dest_files=["res://.godot/imported/player_walk6.png-10d972bc80f09302f0e3170e6e44c17b.ctex"]
 
 [params]
 
