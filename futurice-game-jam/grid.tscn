@@ -5,515 +5,247 @@
 
 [node name="Grid" type="Node2D"]
 script = ExtResource("1_b1p1j")
+_width = 9
+_height = 9
 
 [node name="Cell" parent="." instance=ExtResource("2_d1ccb")]
 
 [node name="Cell2" parent="." instance=ExtResource("2_d1ccb")]
+position = Vector2(0, 32)
 
 [node name="Cell3" parent="." instance=ExtResource("2_d1ccb")]
+position = Vector2(0, 64)
 
 [node name="Cell4" parent="." instance=ExtResource("2_d1ccb")]
+position = Vector2(0, 96)
 
 [node name="Cell5" parent="." instance=ExtResource("2_d1ccb")]
+position = Vector2(0, 128)
 
 [node name="Cell6" parent="." instance=ExtResource("2_d1ccb")]
+position = Vector2(0, 160)
 
 [node name="Cell7" parent="." instance=ExtResource("2_d1ccb")]
+position = Vector2(0, 192)
 
 [node name="Cell8" parent="." instance=ExtResource("2_d1ccb")]
+position = Vector2(0, 224)
 
 [node name="Cell9" parent="." instance=ExtResource("2_d1ccb")]
+position = Vector2(0, 256)
 
 [node name="Cell10" parent="." instance=ExtResource("2_d1ccb")]
+position = Vector2(32, 0)
 
 [node name="Cell11" parent="." instance=ExtResource("2_d1ccb")]
+position = Vector2(32, 32)
 
 [node name="Cell12" parent="." instance=ExtResource("2_d1ccb")]
+position = Vector2(32, 64)
 
 [node name="Cell13" parent="." instance=ExtResource("2_d1ccb")]
+position = Vector2(32, 96)
 
 [node name="Cell14" parent="." instance=ExtResource("2_d1ccb")]
+position = Vector2(32, 128)
 
 [node name="Cell15" parent="." instance=ExtResource("2_d1ccb")]
+position = Vector2(32, 160)
 
 [node name="Cell16" parent="." instance=ExtResource("2_d1ccb")]
+position = Vector2(32, 192)
 
 [node name="Cell17" parent="." instance=ExtResource("2_d1ccb")]
+position = Vector2(32, 224)
 
 [node name="Cell18" parent="." instance=ExtResource("2_d1ccb")]
+position = Vector2(32, 256)
 
 [node name="Cell19" parent="." instance=ExtResource("2_d1ccb")]
+position = Vector2(64, 0)
 
 [node name="Cell20" parent="." instance=ExtResource("2_d1ccb")]
+position = Vector2(64, 32)
 
 [node name="Cell21" parent="." instance=ExtResource("2_d1ccb")]
+position = Vector2(64, 64)
 
 [node name="Cell22" parent="." instance=ExtResource("2_d1ccb")]
+position = Vector2(64, 96)
 
 [node name="Cell23" parent="." instance=ExtResource("2_d1ccb")]
+position = Vector2(64, 128)
 
 [node name="Cell24" parent="." instance=ExtResource("2_d1ccb")]
+position = Vector2(64, 160)
 
 [node name="Cell25" parent="." instance=ExtResource("2_d1ccb")]
+position = Vector2(64, 192)
 
 [node name="Cell26" parent="." instance=ExtResource("2_d1ccb")]
+position = Vector2(64, 224)
 
 [node name="Cell27" parent="." instance=ExtResource("2_d1ccb")]
+position = Vector2(64, 256)
 
 [node name="Cell28" parent="." instance=ExtResource("2_d1ccb")]
+position = Vector2(96, 0)
 
 [node name="Cell29" parent="." instance=ExtResource("2_d1ccb")]
+position = Vector2(96, 32)
 
 [node name="Cell30" parent="." instance=ExtResource("2_d1ccb")]
+position = Vector2(96, 64)
 
 [node name="Cell31" parent="." instance=ExtResource("2_d1ccb")]
+position = Vector2(96, 96)
 
 [node name="Cell32" parent="." instance=ExtResource("2_d1ccb")]
+position = Vector2(96, 128)
 
 [node name="Cell33" parent="." instance=ExtResource("2_d1ccb")]
+position = Vector2(96, 160)
 
 [node name="Cell34" parent="." instance=ExtResource("2_d1ccb")]
+position = Vector2(96, 192)
 
 [node name="Cell35" parent="." instance=ExtResource("2_d1ccb")]
+position = Vector2(96, 224)
 
 [node name="Cell36" parent="." instance=ExtResource("2_d1ccb")]
+position = Vector2(96, 256)
 
 [node name="Cell37" parent="." instance=ExtResource("2_d1ccb")]
+position = Vector2(128, 0)
 
 [node name="Cell38" parent="." instance=ExtResource("2_d1ccb")]
+position = Vector2(128, 32)
 
 [node name="Cell39" parent="." instance=ExtResource("2_d1ccb")]
+position = Vector2(128, 64)
 
 [node name="Cell40" parent="." instance=ExtResource("2_d1ccb")]
+position = Vector2(128, 96)
 
 [node name="Cell41" parent="." instance=ExtResource("2_d1ccb")]
+position = Vector2(128, 128)
 
 [node name="Cell42" parent="." instance=ExtResource("2_d1ccb")]
+position = Vector2(128, 160)
 
 [node name="Cell43" parent="." instance=ExtResource("2_d1ccb")]
+position = Vector2(128, 192)
 
 [node name="Cell44" parent="." instance=ExtResource("2_d1ccb")]
+position = Vector2(128, 224)
 
 [node name="Cell45" parent="." instance=ExtResource("2_d1ccb")]
+position = Vector2(128, 256)
 
 [node name="Cell46" parent="." instance=ExtResource("2_d1ccb")]
+position = Vector2(160, 0)
 
 [node name="Cell47" parent="." instance=ExtResource("2_d1ccb")]
+position = Vector2(160, 32)
 
 [node name="Cell48" parent="." instance=ExtResource("2_d1ccb")]
+position = Vector2(160, 64)
 
 [node name="Cell49" parent="." instance=ExtResource("2_d1ccb")]
+position = Vector2(160, 96)
 
 [node name="Cell50" parent="." instance=ExtResource("2_d1ccb")]
+position = Vector2(160, 128)
 
 [node name="Cell51" parent="." instance=ExtResource("2_d1ccb")]
+position = Vector2(160, 160)
 
 [node name="Cell52" parent="." instance=ExtResource("2_d1ccb")]
+position = Vector2(160, 192)
 
 [node name="Cell53" parent="." instance=ExtResource("2_d1ccb")]
+position = Vector2(160, 224)
 
 [node name="Cell54" parent="." instance=ExtResource("2_d1ccb")]
+position = Vector2(160, 256)
 
 [node name="Cell55" parent="." instance=ExtResource("2_d1ccb")]
+position = Vector2(192, 0)
 
 [node name="Cell56" parent="." instance=ExtResource("2_d1ccb")]
+position = Vector2(192, 32)
 
 [node name="Cell57" parent="." instance=ExtResource("2_d1ccb")]
+position = Vector2(192, 64)
 
 [node name="Cell58" parent="." instance=ExtResource("2_d1ccb")]
+position = Vector2(192, 96)
 
 [node name="Cell59" parent="." instance=ExtResource("2_d1ccb")]
+position = Vector2(192, 128)
 
 [node name="Cell60" parent="." instance=ExtResource("2_d1ccb")]
+position = Vector2(192, 160)
 
 [node name="Cell61" parent="." instance=ExtResource("2_d1ccb")]
+position = Vector2(192, 192)
 
 [node name="Cell62" parent="." instance=ExtResource("2_d1ccb")]
+position = Vector2(192, 224)
 
 [node name="Cell63" parent="." instance=ExtResource("2_d1ccb")]
+position = Vector2(192, 256)
 
 [node name="Cell64" parent="." instance=ExtResource("2_d1ccb")]
+position = Vector2(224, 0)
 
 [node name="Cell65" parent="." instance=ExtResource("2_d1ccb")]
+position = Vector2(224, 32)
 
 [node name="Cell66" parent="." instance=ExtResource("2_d1ccb")]
+position = Vector2(224, 64)
 
 [node name="Cell67" parent="." instance=ExtResource("2_d1ccb")]
+position = Vector2(224, 96)
 
 [node name="Cell68" parent="." instance=ExtResource("2_d1ccb")]
+position = Vector2(224, 128)
 
 [node name="Cell69" parent="." instance=ExtResource("2_d1ccb")]
+position = Vector2(224, 160)
 
 [node name="Cell70" parent="." instance=ExtResource("2_d1ccb")]
+position = Vector2(224, 192)
 
 [node name="Cell71" parent="." instance=ExtResource("2_d1ccb")]
+position = Vector2(224, 224)
 
 [node name="Cell72" parent="." instance=ExtResource("2_d1ccb")]
+position = Vector2(224, 256)
 
 [node name="Cell73" parent="." instance=ExtResource("2_d1ccb")]
+position = Vector2(256, 0)
 
 [node name="Cell74" parent="." instance=ExtResource("2_d1ccb")]
+position = Vector2(256, 32)
 
 [node name="Cell75" parent="." instance=ExtResource("2_d1ccb")]
+position = Vector2(256, 64)
 
 [node name="Cell76" parent="." instance=ExtResource("2_d1ccb")]
+position = Vector2(256, 96)
 
 [node name="Cell77" parent="." instance=ExtResource("2_d1ccb")]
+position = Vector2(256, 128)
 
 [node name="Cell78" parent="." instance=ExtResource("2_d1ccb")]
+position = Vector2(256, 160)
 
 [node name="Cell79" parent="." instance=ExtResource("2_d1ccb")]
+position = Vector2(256, 192)
 
 [node name="Cell80" parent="." instance=ExtResource("2_d1ccb")]
+position = Vector2(256, 224)
 
 [node name="Cell81" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell82" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell83" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell84" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell85" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell86" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell87" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell88" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell89" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell90" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell91" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell92" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell93" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell94" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell95" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell96" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell97" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell98" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell99" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell100" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell101" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell102" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell103" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell104" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell105" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell106" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell107" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell108" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell109" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell110" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell111" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell112" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell113" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell114" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell115" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell116" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell117" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell118" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell119" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell120" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell121" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell122" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell123" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell124" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell125" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell126" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell127" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell128" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell129" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell130" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell131" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell132" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell133" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell134" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell135" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell136" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell137" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell138" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell139" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell140" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell141" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell142" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell143" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell144" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell145" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell146" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell147" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell148" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell149" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell150" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell151" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell152" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell153" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell154" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell155" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell156" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell157" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell158" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell159" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell160" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell161" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell162" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell163" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell164" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell165" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell166" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell167" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell168" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell169" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell170" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell171" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell172" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell173" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell174" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell175" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell176" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell177" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell178" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell179" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell180" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell181" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell182" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell183" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell184" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell185" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell186" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell187" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell188" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell189" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell190" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell191" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell192" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell193" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell194" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell195" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell196" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell197" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell198" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell199" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell200" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell201" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell202" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell203" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell204" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell205" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell206" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell207" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell208" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell209" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell210" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell211" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell212" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell213" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell214" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell215" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell216" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell217" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell218" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell219" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell220" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell221" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell222" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell223" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell224" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell225" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell226" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell227" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell228" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell229" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell230" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell231" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell232" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell233" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell234" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell235" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell236" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell237" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell238" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell239" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell240" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell241" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell242" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell243" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell244" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell245" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell246" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell247" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell248" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell249" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell250" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell251" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell252" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell253" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell254" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell255" parent="." instance=ExtResource("2_d1ccb")]
-
-[node name="Cell256" parent="." instance=ExtResource("2_d1ccb")]
+position = Vector2(256, 256)
