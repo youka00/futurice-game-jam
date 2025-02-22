@@ -2,18 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-
-uid="uid://cwec45d11fbe0"
-
-path="res://.godot/imported/haamu1.png-913fabe018a7263e4e73599c475ee3f5.ctex"
+uid="uid://v24rltciqf"
+path="res://.godot/imported/buttonlight.png-1e13e8d224970da415a9cc216f1f1e03.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/haamu1.png"
-dest_files=["res://.godot/imported/haamu1.png-913fabe018a7263e4e73599c475ee3f5.ctex"]
+source_file="res://Art/buttonlight.png"
+dest_files=["res://.godot/imported/buttonlight.png-1e13e8d224970da415a9cc216f1f1e03.ctex"]
 
 [params]
 
