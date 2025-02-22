@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://6hy1m1knp4f3"]
+
+[ext_resource type="AudioStream" uid="uid://iytpov8ykjey" path="res://Music/graverobber_menu.ogg" id="1_tdu5n"]
+[ext_resource type="Script" path="res://Scripts/MainMenuMusic.cs" id="2_tv5ja"]
+
+[node name="Main Menu Music" type="AudioStreamPlayer"]
+stream = ExtResource("1_tdu5n")
+autoplay = true
+script = ExtResource("2_tv5ja")

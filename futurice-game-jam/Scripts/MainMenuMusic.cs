@@ -3,7 +3,7 @@ using System;
 
 namespace Transparency
 {
-    public partial class Ambience : AudioStreamPlayer
+    public partial class MainMenuMusic : AudioStreamPlayer
     {
         // Called when the node enters the scene tree for the first time.
         public override void _Ready()

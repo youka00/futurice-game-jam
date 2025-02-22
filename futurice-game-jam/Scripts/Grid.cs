@@ -49,7 +49,7 @@ namespace Transparency
             {
                 CreateOccupier(OccupierScene.Steel, GetRandomFreeCell());
             }
-            for (int i = 0; i < 3; i++)
+            for (int i = 0; i < _freeCells.Count; i++)
             {
                 CreateOccupier(OccupierScene.Diamond, GetRandomFreeCell());
             }
