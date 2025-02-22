@@ -13,6 +13,7 @@ namespace Transparency
     {
         None,
         Player,
+        Ghost,
         Collectable,
         Mineable,
         Obstacle
