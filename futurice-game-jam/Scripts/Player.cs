@@ -12,6 +12,12 @@ namespace Transparency
         public CellOccupierType Type => CellOccupierType.Player;
 
         public Color AffectedByColor => Color.None;
+        private string _redScenePath = "res://red_light.tscn";
+        private string _greenScenePath = "res://green_light.tscn";
+        private string _blueScenePath = "res://blue_light.tscn";
+        private PackedScene _redScene = null;
+        private PackedScene _greenScene = null;
+        private PackedScene _blueScene = null;
 
         public enum Direction
         {
@@ -24,7 +30,9 @@ namespace Transparency
         // Called when the node enters the scene tree for the first time.
         public override void _Ready()
         {
-            
+            _redScene = ResourceLoader.Load<PackedScene>(_redScenePath);
+            _blueScene = ResourceLoader.Load<PackedScene>(_blueScenePath);
+            _greenScene = ResourceLoader.Load<PackedScene>(_greenScenePath);
         }
 
         // Called every frame. 'delta' is the elapsed time since the previous frame.

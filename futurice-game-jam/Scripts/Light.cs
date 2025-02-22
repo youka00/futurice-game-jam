@@ -30,6 +30,7 @@ namespace Transparency
                     _affectedArea[l] = new Vector2I(i + gridPosition.X, j + gridPosition.Y);
                 }
             }
+            CheckLightCollision();
         }
         public void LightMove(Vector2I direction)
         {
