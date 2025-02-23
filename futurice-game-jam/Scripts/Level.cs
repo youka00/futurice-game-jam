@@ -11,6 +11,12 @@ namespace Transparency
         [Export] private Ambience _ambience = null;
         private Win _win = null;
         private Loss _loss = null;
+        private int _score = 0;
+        public int Score {get {return _score;} set {_score = value;}}
+
+        [Export] public CharacterBody2D redGem; // Red Ghost
+        [Export] public CharacterBody2D blueGem; // Blue Ghost
+        [Export] public CharacterBody2D greenGem; // Green Ghost
         public Level()
         {
             Current = this;

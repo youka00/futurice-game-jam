@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bfxghm4pdoduy"
-path="res://.godot/imported/blue_glass1.png-9b2cc6c77fbebca27e98a7858ee8bf79.ctex"
+uid="uid://bl1c3v4y7k6yr"
+path="res://.godot/imported/player_faceback.png-741ee1b72236210ef5838927081cc083.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/glasses/blue_glass1.png"
-dest_files=["res://.godot/imported/blue_glass1.png-9b2cc6c77fbebca27e98a7858ee8bf79.ctex"]
+source_file="res://Art/player_faceback.png"
+dest_files=["res://.godot/imported/player_faceback.png-741ee1b72236210ef5838927081cc083.ctex"]
 
 [params]
 

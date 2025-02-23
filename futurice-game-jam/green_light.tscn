@@ -7,7 +7,7 @@
 radius = 67.897
 
 [node name="Green Light" type="Sprite2D"]
-modulate = Color(0.00350832, 0.650489, 0.220607, 1)
+modulate = Color(0.67451, 0.709804, 0.396078, 1)
 texture = ExtResource("1_yrnbp")
 script = ExtResource("2_sqyrb")
 

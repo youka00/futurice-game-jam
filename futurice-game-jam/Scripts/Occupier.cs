@@ -8,6 +8,7 @@ namespace Transparency
         public void LightCollision(Color color){}
         public void RemoveLight(){}
         public void Delete(){}
+        public void Collect(){}
     }
 
     public enum CellOccupierType

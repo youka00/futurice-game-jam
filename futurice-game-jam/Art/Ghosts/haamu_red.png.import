@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bfxghm4pdoduy"
-path="res://.godot/imported/blue_glass1.png-9b2cc6c77fbebca27e98a7858ee8bf79.ctex"
+uid="uid://cddwvobwhs4ib"
+path="res://.godot/imported/haamu_red.png-003f45f8d72af025e3268a4b8f3a8da3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/glasses/blue_glass1.png"
-dest_files=["res://.godot/imported/blue_glass1.png-9b2cc6c77fbebca27e98a7858ee8bf79.ctex"]
+source_file="res://Art/Ghosts/haamu_red.png"
+dest_files=["res://.godot/imported/haamu_red.png-003f45f8d72af025e3268a4b8f3a8da3.ctex"]
 
 [params]
 

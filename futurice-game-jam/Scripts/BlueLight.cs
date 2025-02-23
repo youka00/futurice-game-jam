@@ -6,9 +6,9 @@ namespace Transparency
     public partial class BlueLight : Light
     {
         [Signal]
-        public delegate void GhostEnteredEventHandler(CharacterBody2D blue);
+        public delegate void GhostEnteredEventHandler(CharacterBody2D characterBody2D);
         [Signal]
-        public delegate void GhostExitedEventHandler(CharacterBody2D blue);
+        public delegate void GhostExitedEventHandler(CharacterBody2D characterBody2D);
 
         private Area2D _area; // Reference to Area2D
 

@@ -93,20 +93,29 @@ namespace Transparency
                 RedDiamond redDiamond = scene.Instantiate<RedDiamond>();
                 cell.AddChild(redDiamond);
                 cell.Occupiers.Add(redDiamond);
+                Level.Current.redGem = redDiamond;
                 break;
                 case OccupierScene.GreenDiamond:
                 scene = ResourceLoader.Load<PackedScene>(_greenDiamondScene);
                 GreenDiamond greenDiamond = scene.Instantiate<GreenDiamond>();
                 cell.AddChild(greenDiamond);
                 cell.Occupiers.Add(greenDiamond);
+                Level.Current.greenGem = greenDiamond;
                 break;
                 case OccupierScene.BlueDiamond:
                 scene = ResourceLoader.Load<PackedScene>(_blueDiamondScene);
                 BlueDiamond blueDiamond = scene.Instantiate<BlueDiamond>();
                 cell.AddChild(blueDiamond);
                 cell.Occupiers.Add(blueDiamond);
+                Level.Current.blueGem = blueDiamond;
                 break;
             }
+        }
+        public Cell GetRandomCell()
+        {
+            int i = GD.RandRange(0, _width - 1);
+            int j = GD.RandRange(0, _height - 1);
+            return _cells[i, j];
         }
         // ÄLÄ KATO TÄNNE TÄÄL ON PURKKAA SILMÄNKANTAMATTOMIIN
         private void MakePath()

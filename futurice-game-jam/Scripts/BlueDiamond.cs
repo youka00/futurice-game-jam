@@ -3,7 +3,7 @@ using System;
 
 namespace Transparency
 {
-    public partial class BlueDiamond : Sprite2D, Occupier
+    public partial class BlueDiamond : CharacterBody2D, Occupier
     {
         public CellOccupierType Type => CellOccupierType.Collectable;
 
@@ -19,16 +19,16 @@ namespace Transparency
         public override void _Process(double delta)
         {
         }
-        public void LightCollision(Color color)
+        public void Collect()
         {
-            if (color == AffectedByColor)
+            Level.Current.Score++;
+            Cell parent = GetParent() as Cell;
+            parent.Occupiers.Remove(this);
+            if (Level.Current.Score > 2)
             {
-                Visible = true;
+                Level.Current.Win();
             }
-        }
-        public void RemoveLight()
-        {
-            Visible = false;
+            QueueFree();
         }
     }
 }
