@@ -183,6 +183,7 @@ namespace Transparency
             {
                 if (i.Type == CellOccupierType.Mineable)
                 {
+                    cell.Collidable = false;
                     i.Delete();
                     _breakStone.Play();
                     break;
