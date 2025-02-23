@@ -2,13 +2,32 @@ using Godot;
 
 namespace Transparency
 {
+
     public abstract partial class Light : Sprite2D
     {
+          public bool IsInLightArea(Vector2 position)
+{
+    if (GetNode<Area2D>("Area2D") is Area2D area2D)
+    {
+        foreach (var body in area2D.GetOverlappingBodies())
+        {
+            if (body is Node2D node2D && node2D.GlobalPosition == position)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+    return false;
+}
         [Export] private Color _color = Color.None;
         public Color LightColor {get {return _color;} set {_color = value;}}
+        private Vector2I _light = Vector2I.Zero;
         private Vector2I _gridPosition = Vector2I.Zero;
         public Vector2I GridPosition{get {return _gridPosition;} set {_gridPosition = value;}}
         private Vector2I[] _affectedArea = new Vector2I[9];
+
+        public Vector2I CurrentLight{get {return _light;}}
         public Light()
         {
             int l = 0;
