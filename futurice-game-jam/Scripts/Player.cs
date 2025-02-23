@@ -60,33 +60,10 @@ namespace Transparency
 
         private bool IsInRange()
         {
-            if (Input.IsActionJustPressed("MoveUp"))
-            {
-                Move(Vector2I.Up);
-                _footsteps.Play();
-                _lookingAt = _gridPosition + Vector2I.Up;
-            }
-            if (Input.IsActionJustPressed("MoveDown"))
-            {
-                Move(Vector2I.Down);
-                _footsteps.Play();
-                _lookingAt = _gridPosition + Vector2I.Down;
-            }
-            if (Input.IsActionJustPressed("MoveLeft"))
-            {
-                Move(Vector2I.Left);
-                _footsteps.Play();
-                _lookingAt = _gridPosition + Vector2I.Left;
-            }
-            if (Input.IsActionJustPressed("MoveRight"))
-            {
-                Move(Vector2I.Right);
-                _footsteps.Play();
-                _lookingAt = _gridPosition + Vector2I.Right;
-            }
-            return characterBody2D.GlobalPosition.DistanceTo(GlobalPosition) <= 0 ||
+           return characterBody2D.GlobalPosition.DistanceTo(GlobalPosition) <= 0 ||
                    blue.GlobalPosition.DistanceTo(GlobalPosition) <= 0 ||
                    green.GlobalPosition.DistanceTo(GlobalPosition) <= 0;
+
         }
 
         private void UpdateGhostVisibility()
@@ -129,14 +106,41 @@ namespace Transparency
 
         private void ReadInput()
         {
-            if (Input.IsActionJustPressed("MoveUp")) Move(Vector2I.Up);
-            if (Input.IsActionJustPressed("MoveDown")) Move(Vector2I.Down);
-            if (Input.IsActionJustPressed("MoveLeft")) Move(Vector2I.Left);
-            if (Input.IsActionJustPressed("MoveRight")) Move(Vector2I.Right);
+             if (Input.IsActionJustPressed("MoveUp"))
+            {
+                Move(Vector2I.Up);
+                _footsteps.Play();
+                _lookingAt = _gridPosition + Vector2I.Up;
+            }
+            if (Input.IsActionJustPressed("MoveDown"))
+            {
+                Move(Vector2I.Down);
+                _footsteps.Play();
+                _lookingAt = _gridPosition + Vector2I.Down;
+            }
+            if (Input.IsActionJustPressed("MoveLeft"))
+            {
+                Move(Vector2I.Left);
+                _footsteps.Play();
+                _lookingAt = _gridPosition + Vector2I.Left;
+            }
+            if (Input.IsActionJustPressed("MoveRight"))
+            {
+                Move(Vector2I.Right);
+                _footsteps.Play();
+                _lookingAt = _gridPosition + Vector2I.Right;
+            }
+
 
             if (Input.IsActionJustPressed("Red")) ChangeLight(_redScene, typeof(RedLight));
             if (Input.IsActionJustPressed("Green")) ChangeLight(_greenScene, typeof(GreenLight));
             if (Input.IsActionJustPressed("Blue")) ChangeLight(_blueScene, typeof(BlueLight));
+            if (Input.IsActionJustPressed("Mine"))
+            {
+                Mine(_lookingAt);
+            }
+
+
         }
 
         private void ChangeLight(PackedScene newLightScene, Type lightType)
@@ -167,10 +171,12 @@ namespace Transparency
                     greenLight.Connect("GhostEntered", Callable.From<Node2D>(OnGhostEnteredGreenLight));
                     greenLight.Connect("GhostExited", Callable.From<Node2D>(OnGhostExitedGreenLight));
                 }
-            }
-            if (Input.IsActionJustPressed("Mine"))
-            {
-                Mine(_lookingAt);
+                // Connect signals for BlueLight
+                else if (_light is BlueLight blueLight)
+                {
+                    blueLight.Connect("GhostEntered", Callable.From<Node2D>(OnGhostEnteredBlueLight));
+                    blueLight.Connect("GhostExited", Callable.From<Node2D>(OnGhostExitedBlueLight));
+                }
             }
 
             UpdateGhostVisibility(); // Immediately update ghost visibility
@@ -252,6 +258,18 @@ namespace Transparency
         private void OnGhostExitedGreenLight(Node2D haamu)
         {
             GD.Print("Green Ghost exited green light!");
+            haamu.Visible = false;
+        }
+
+        private void OnGhostEnteredBlueLight(Node2D haamu)
+        {
+            GD.Print("Blue Ghost entered blue light!");
+            haamu.Visible = true;
+        }
+
+        private void OnGhostExitedBlueLight(Node2D haamu)
+        {
+            GD.Print("Blue Ghost exited blue light!");
             haamu.Visible = false;
         }
     }
