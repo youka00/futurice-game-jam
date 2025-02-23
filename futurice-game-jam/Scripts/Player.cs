@@ -83,6 +83,7 @@ namespace Transparency
                 Move(Vector2I.Right);
                 _footsteps.Play();
                 _lookingAt = _gridPosition + Vector2I.Right;
+            }
             return characterBody2D.GlobalPosition.DistanceTo(GlobalPosition) <= 0 ||
                    blue.GlobalPosition.DistanceTo(GlobalPosition) <= 0 ||
                    green.GlobalPosition.DistanceTo(GlobalPosition) <= 0;
@@ -228,7 +229,7 @@ namespace Transparency
                     break;
                 }
             }
-
+        }
         // Ensure Signal Methods Exist
         private void OnGhostEnteredRedLight(Node2D haamu)
         {
