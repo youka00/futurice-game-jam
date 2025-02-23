@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://c8kfh0yh4mham"]
+[gd_scene load_steps=4 format=3 uid="uid://bgkaywiu6mbdt"]
 
 [ext_resource type="Texture2D" uid="uid://bjh5fyeoj4hth" path="res://Art/gems.png" id="1_pixl7"]
 [ext_resource type="Script" path="res://Scripts/GreenDiamond.cs" id="2_jywc4"]

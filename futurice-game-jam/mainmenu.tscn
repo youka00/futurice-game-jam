@@ -1,13 +1,14 @@
-[gd_scene load_steps=8 format=3 uid="uid://dpiwtgr14n4os"]
+[gd_scene load_steps=10 format=3 uid="uid://dpiwtgr14n4os"]
 
 [ext_resource type="Script" path="res://Scripts/Mainmenu.cs" id="1_m7cny"]
 [ext_resource type="Texture2D" uid="uid://0asym8br3x50" path="res://Art/kyltti.png" id="2_fxhi7"]
-[ext_resource type="PackedScene" uid="uid://6hy1m1knp4f3" path="res://main_menu_music.tscn" id="2_itxn1"]
 [ext_resource type="PackedScene" path="res://main_menu_music.tscn" id="2_itxn1"]
 [ext_resource type="Texture2D" uid="uid://cxh5oggfru0n4" path="res://Art/graverobber_logo.png" id="2_l1y10"]
 [ext_resource type="Texture2D" uid="uid://dy4ygyhpd16wt" path="res://Art/background1.png" id="3_ul7b4"]
 [ext_resource type="Texture2D" uid="uid://bp71y6bljmn3k" path="res://Art/volume_max.png" id="4_t6he0"]
 [ext_resource type="Texture2D" uid="uid://cw8gy5kptkvwh" path="res://Art/volume_off.png" id="5_tpyaf"]
+[ext_resource type="Texture2D" uid="uid://ceut2dar5xvjm" path="res://pause.png" id="5_y3udq"]
+[ext_resource type="Texture2D" uid="uid://d1tbmk4ob3lyn" path="res://how-to-play.png" id="6_l3q5c"]
 
 [node name="Mainmenu" type="Node2D" node_paths=PackedStringArray("PlayButton", "CreditsButton", "QuitButton", "HowplayButton", "CreditsPopup", "HowtoplayPopup", "CloseCreditsButton", "CloseHowtoplayButton", "MusicButton", "MusicPlayer", "volume_max", "volume_out")]
 position = Vector2(107, 66)
@@ -192,12 +193,17 @@ offset_top = -72.5448
 offset_right = 667.175
 offset_bottom = 372.455
 scale = Vector2(1.13342, 1.09107)
-color = Color(5.65536e-07, 0.292629, 0.292698, 1)
+color = Color(0.627451, 0.592157, 0.631373, 1)
 
 [node name="Label" type="Label" parent="CreditsPopup"]
 layout_mode = 0
-offset_right = 820.0
-offset_bottom = 138.0
+offset_left = -22.1646
+offset_top = -11.3983
+offset_right = 797.835
+offset_bottom = 126.602
+theme_override_colors/font_color = Color(0.133333, 0.12549, 0.203922, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 80
 text = "Credits"
 horizontal_alignment = 1
@@ -209,19 +215,45 @@ offset_top = 11.0
 offset_right = 66.0
 offset_bottom = 61.0
 
+[node name="Sprite2D" type="Sprite2D" parent="CreditsPopup/CloseCreditsButton"]
+position = Vector2(24.6354, 23.1946)
+scale = Vector2(2.07794, 1.75912)
+texture = ExtResource("5_y3udq")
+
 [node name="Label" type="Label" parent="CreditsPopup/CloseCreditsButton"]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
-text = "Close
-"
+offset_left = 12.0
+offset_top = 6.0
+offset_right = 54.0
+offset_bottom = 48.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "X"
+
+[node name="Label2" type="Label" parent="CreditsPopup"]
+layout_mode = 0
+offset_left = 46.1766
+offset_top = 110.183
+offset_right = 760.177
+offset_bottom = 397.183
+theme_override_colors/font_color = Color(0.133333, 0.12549, 0.203922, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = "Developers: Tuukka \"Shabby\" Rintala
+            Melisa \"Sasa\" Uluöz
+
+Art designers: Kharon \"Kryppe\" Saari
+	       Ilkka \"Ilbu\" Wahala"
 
 [node name="howtoplayPopup" type="ColorRect" parent="."]
 visible = false
-offset_left = -152.825
-offset_top = -87.0538
-offset_right = 667.175
-offset_bottom = 357.946
+offset_left = -150.731
+offset_top = -72.5449
+offset_right = 669.269
+offset_bottom = 372.455
 scale = Vector2(1.133, 1.133)
 color = Color(3.48948e-07, 0.292547, 0.293278, 1)
 
@@ -235,19 +267,31 @@ theme_override_font_sizes/font_size = 90
 text = "How to play"
 horizontal_alignment = 1
 
+[node name="Sprite2D" type="Sprite2D" parent="howtoplayPopup"]
+position = Vector2(412.046, 221.357)
+texture = ExtResource("6_l3q5c")
+
 [node name="CloseHowtoplayButton" type="Button" parent="howtoplayPopup"]
 layout_mode = 0
 offset_right = 69.0
 offset_bottom = 43.0
 
+[node name="Sprite2D2" type="Sprite2D" parent="howtoplayPopup/CloseHowtoplayButton"]
+position = Vector2(35.1072, 21.9528)
+scale = Vector2(2.05904, 1.52904)
+texture = ExtResource("5_y3udq")
+
 [node name="Label" type="Label" parent="howtoplayPopup/CloseHowtoplayButton"]
 layout_mode = 0
-offset_left = 8.0
-offset_top = 8.0
-offset_right = 50.0
-offset_bottom = 31.0
-text = "Close
-"
+offset_left = 24.0208
+offset_top = -4.05312e-05
+offset_right = 66.0208
+offset_bottom = 44.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 31
+text = "X"
 
 [node name="Main Menu Music" parent="." instance=ExtResource("2_itxn1")]
 
