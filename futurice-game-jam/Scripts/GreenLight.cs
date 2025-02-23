@@ -6,9 +6,9 @@ namespace Transparency
     public partial class GreenLight : Light
     {
         [Signal]
-        public delegate void GhostEnteredEventHandler(CharacterBody2D green);
+        public delegate void GhostEnteredEventHandler(CharacterBody2D characterBody2D);
         [Signal]
-        public delegate void GhostExitedEventHandler(CharacterBody2D green);
+        public delegate void GhostExitedEventHandler(CharacterBody2D characterBody2D);
 
         private Area2D _area; // Reference to Area2D
 
@@ -43,6 +43,5 @@ namespace Transparency
                 EmitSignal(nameof(GhostExited), body);
             }
         }
-
     }
 }
