@@ -1,8 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://crr2ap0ngx2fn"]
+[gd_scene load_steps=11 format=3 uid="uid://crr2ap0ngx2fn"]
 
 [ext_resource type="Script" path="res://Scripts/Player.cs" id="1_lqis4"]
-[ext_resource type="Texture2D" uid="uid://dao1kgxvjojlc" path="res://Art/player_anim.png" id="2_o6og0"]
+[ext_resource type="Texture2D" uid="uid://dpvdtdedc7nvq" path="res://Art/Ghosts/player_direction_atlas.png" id="2_3ja1b"]
 [ext_resource type="PackedScene" uid="uid://dng7py22ms7mu" path="res://break_stone.tscn" id="3_1rpg7"]
+[ext_resource type="Script" path="res://Scripts/PlayerSprite.cs" id="3_i086x"]
 [ext_resource type="Script" path="res://Scripts/BreakStone.cs" id="4_x4yk3"]
 [ext_resource type="PackedScene" uid="uid://cqrbdedyfnpn8" path="res://hit_unbreakable.tscn" id="5_5s3ne"]
 [ext_resource type="Script" path="res://Scripts/HitUnbreakable.cs" id="6_s3dvg"]
@@ -16,10 +17,10 @@ radius = 16.0
 script = ExtResource("1_lqis4")
 
 [node name="Player" type="Sprite2D" parent="."]
-texture = ExtResource("2_o6og0")
-hframes = 8
-vframes = 2
-frame = 13
+texture = ExtResource("2_3ja1b")
+hframes = 2
+frame = 1
+script = ExtResource("3_i086x")
 
 [node name="PlayerCollision" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_r2std")
