@@ -18,16 +18,14 @@ namespace Transparency
         public override void _Process(double delta)
         {
         }
-        public void LightCollision(Color color)
+        public void Collect()
         {
-            if (color == AffectedByColor)
+            Level.Current.Score++;
+            if (Level.Current.Score > 2)
             {
-                Visible = true;
+                Level.Current.Win();
             }
-        }
-        public void RemoveLight()
-        {
-            Visible = false;
+            QueueFree();
         }
     }
 }

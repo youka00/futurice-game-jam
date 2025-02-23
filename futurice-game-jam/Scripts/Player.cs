@@ -29,7 +29,6 @@ namespace Transparency
         private HitUnbreakable _hitUnbreakable = null;
         private BreakStone _breakStone = null;
         private Footsteps _footsteps = null;
-
         public enum Direction
         {
             None = 0,
@@ -189,6 +188,13 @@ namespace Transparency
             {
                 GlobalPosition += direction * Level.Current.CurrentGrid.CellHeight;
                 _gridPosition += direction;
+                foreach (Occupier i in Level.Current.CurrentGrid.Cells[_gridPosition.X, _gridPosition.Y].Occupiers)
+                {
+                    if (i.Type == CellOccupierType.Collectable)
+                    {
+                        i.Collect();
+                    }
+                }
             }
         }
 
