@@ -22,10 +22,10 @@ offset_bottom = 227.0
 
 [node name="Play" type="Label" parent="PlayButton"]
 layout_mode = 0
-offset_left = 7.0
-offset_top = 12.0
-offset_right = 214.0
-offset_bottom = 84.0
+offset_left = -36.0
+offset_top = 10.0
+offset_right = 171.0
+offset_bottom = 82.0
 theme_override_font_sizes/font_size = 46
 text = "PLAY"
 horizontal_alignment = 1
