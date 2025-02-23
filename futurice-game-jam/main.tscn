@@ -6,9 +6,9 @@
 [ext_resource type="Texture2D" uid="uid://dsi1l2rlv1kcr" path="res://Art/game_atlas.png" id="2_vhtfl"]
 [ext_resource type="PackedScene" uid="uid://crr2ap0ngx2fn" path="res://player.tscn" id="3_ondpg"]
 [ext_resource type="PackedScene" uid="uid://ce3ioxnjy7gqj" path="res://esc.tscn" id="4_bfrit"]
-[ext_resource type="PackedScene" uid="uid://dsqjxre4sux3d" path="res://ambience.tscn" id="6_pvnwa"]
-[ext_resource type="PackedScene" uid="uid://g8gjrbb3fipq" path="res://loss.tscn" id="7_fauax"]
-[ext_resource type="PackedScene" uid="uid://b3pr345ss1l5l" path="res://win.tscn" id="8_vhbo0"]
+[ext_resource type="PackedScene" path="res://ambience.tscn" id="6_pvnwa"]
+[ext_resource type="PackedScene" path="res://loss.tscn" id="7_fauax"]
+[ext_resource type="PackedScene" path="res://win.tscn" id="8_vhbo0"]
 [ext_resource type="PackedScene" uid="uid://bi3ocurdyxrk2" path="res://haamu.tscn" id="9_2bpph"]
 [ext_resource type="Script" path="res://Scripts/HaamuMovement.cs" id="10_s4yg8"]
 [ext_resource type="Texture2D" uid="uid://brxle1sbt4vi7" path="res://haamu4.png" id="11_cbgh5"]
@@ -83,16 +83,12 @@ position = Vector2(223, -17)
 [node name="haamu" parent="." instance=ExtResource("9_2bpph")]
 position = Vector2(-4, 103)
 
-[node name="CharacterBody2D" parent="haamu" index="0"]
-_destination = Vector2(234, 143)
-
 [node name="green" type="CharacterBody2D" parent="haamu"]
 z_index = 3
 position = Vector2(251, -44)
 script = ExtResource("10_s4yg8")
 LeftLimit = -100.0
 RightLimit = 50.0
-_destination = Vector2(0, 224)
 
 [node name="Haamu4" type="Sprite2D" parent="haamu/green"]
 scale = Vector2(1, 1.019)
@@ -107,7 +103,6 @@ position = Vector2(249, 137)
 script = ExtResource("10_s4yg8")
 LeftLimit = -100.0
 RightLimit = 50.0
-_destination = Vector2(0, 224)
 
 [node name="Haamu4" type="Sprite2D" parent="haamu/blue"]
 scale = Vector2(1, 1.019)

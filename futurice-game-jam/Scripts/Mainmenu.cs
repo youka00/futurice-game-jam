@@ -12,7 +12,9 @@ public partial class Mainmenu : Node
     [Export] public Button CloseCreditsButton;
     [Export] public Button CloseHowtoplayButton;
     [Export] public Button MusicButton;
-    [Export] public AudioStreamPlayer MusicPlayer; // Reference to the music player
+    [Export] public AudioStreamPlayer MusicPlayer;
+    [Export] public Sprite2D volume_max;
+    [Export] public Sprite2D volume_out;
 
     public override void _Ready()
     {
@@ -31,15 +33,19 @@ public partial class Mainmenu : Node
             return;
         }
 
-        // Initialize MusicButton text
+        // Initialize MusicButton text and sprite
         int musicBus = AudioServer.GetBusIndex("Music");
         if (AudioServer.IsBusMute(musicBus))
         {
-            MusicButton.Text = "Music: Off";
+
+            volume_max.Visible = false;
+            volume_out.Visible = true;
         }
         else
         {
-            MusicButton.Text = "Music: On";
+
+            volume_max.Visible = true;
+            volume_out.Visible = false;
         }
     }
 
@@ -51,7 +57,9 @@ public partial class Mainmenu : Node
         {
             // Unmute and resume playing
             AudioServer.SetBusMute(musicBus, false);
-            MusicButton.Text = "Music: On";
+
+            volume_max.Visible = true;
+            volume_out.Visible = false;
 
             if (MusicPlayer.StreamPaused) // Resume music if it was paused
             {
@@ -66,7 +74,9 @@ public partial class Mainmenu : Node
         {
             // Mute and pause music
             AudioServer.SetBusMute(musicBus, true);
-            MusicButton.Text = "Music: Off";
+
+            volume_max.Visible = false;
+            volume_out.Visible = true;
             MusicPlayer.StreamPaused = true;
         }
     }
