@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" path="res://Scripts/Mainmenu.cs" id="1_m7cny"]
 [ext_resource type="Texture2D" uid="uid://0asym8br3x50" path="res://Art/kyltti.png" id="2_fxhi7"]
+[ext_resource type="PackedScene" uid="uid://6hy1m1knp4f3" path="res://main_menu_music.tscn" id="2_itxn1"]
 [ext_resource type="PackedScene" path="res://main_menu_music.tscn" id="2_itxn1"]
 [ext_resource type="Texture2D" uid="uid://cxh5oggfru0n4" path="res://Art/graverobber_logo.png" id="2_l1y10"]
 [ext_resource type="Texture2D" uid="uid://dy4ygyhpd16wt" path="res://Art/background1.png" id="3_ul7b4"]
@@ -249,7 +250,6 @@ text = "Close
 "
 
 [node name="Main Menu Music" parent="." instance=ExtResource("2_itxn1")]
-bus = &"Music"
 
 [node name="MusicButton" type="Button" parent="."]
 offset_left = 778.779

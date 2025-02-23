@@ -6,7 +6,7 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_or7qw"]
 
 [node name="Red Light" type="Sprite2D"]
-modulate = Color(1, 0.027451, 0.164706, 1)
+modulate = Color(0.776471, 0.333333, 0.313726, 1)
 texture = ExtResource("1_ralim")
 script = ExtResource("2_deta3")
 

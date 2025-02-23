@@ -93,18 +93,21 @@ namespace Transparency
                 RedDiamond redDiamond = scene.Instantiate<RedDiamond>();
                 cell.AddChild(redDiamond);
                 cell.Occupiers.Add(redDiamond);
+                Level.Current.redGem = redDiamond;
                 break;
                 case OccupierScene.GreenDiamond:
                 scene = ResourceLoader.Load<PackedScene>(_greenDiamondScene);
                 GreenDiamond greenDiamond = scene.Instantiate<GreenDiamond>();
                 cell.AddChild(greenDiamond);
                 cell.Occupiers.Add(greenDiamond);
+                Level.Current.greenGem = greenDiamond;
                 break;
                 case OccupierScene.BlueDiamond:
                 scene = ResourceLoader.Load<PackedScene>(_blueDiamondScene);
                 BlueDiamond blueDiamond = scene.Instantiate<BlueDiamond>();
                 cell.AddChild(blueDiamond);
                 cell.Occupiers.Add(blueDiamond);
+                Level.Current.blueGem = blueDiamond;
                 break;
             }
         }
