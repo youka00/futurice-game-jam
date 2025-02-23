@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://dsjolbag6ktsr"]
+
+[ext_resource type="Texture2D" uid="uid://bjh5fyeoj4hth" path="res://Art/gems.png" id="1_1d0ct"]
+[ext_resource type="Script" path="res://Scripts/RedDiamond.cs" id="1_b15oh"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vgyx5"]
+
+[node name="Red Diamond" type="CharacterBody2D"]
+z_index = 1
+script = ExtResource("1_b15oh")
+
+[node name="CharacterBody2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_1d0ct")
+hframes = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_vgyx5")

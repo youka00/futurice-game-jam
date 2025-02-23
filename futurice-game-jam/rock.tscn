@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://85bvguyw28rs"]
+
+[ext_resource type="Texture2D" uid="uid://dsi1l2rlv1kcr" path="res://Art/game_atlas.png" id="1_fw5s1"]
+[ext_resource type="Script" path="res://Scripts/Rock.cs" id="2_skl7e"]
+
+[node name="Rock" type="Sprite2D"]
+texture = ExtResource("1_fw5s1")
+hframes = 6
+vframes = 2
+script = ExtResource("2_skl7e")

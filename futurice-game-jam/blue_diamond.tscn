@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://blgfvsgw46t57"]
+
+[ext_resource type="Texture2D" uid="uid://bjh5fyeoj4hth" path="res://Art/gems.png" id="1_w7m06"]
+[ext_resource type="Script" path="res://Scripts/BlueDiamond.cs" id="2_wtrkv"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5rg0q"]
+
+[node name="Blue Diamond" type="CharacterBody2D"]
+z_index = 1
+script = ExtResource("2_wtrkv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_5rg0q")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_w7m06")
+hframes = 3
+frame = 2

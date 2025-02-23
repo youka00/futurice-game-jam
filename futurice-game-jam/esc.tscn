@@ -1,0 +1,107 @@
+[gd_scene load_steps=2 format=3 uid="uid://ce3ioxnjy7gqj"]
+
+[ext_resource type="Script" path="res://Scripts/PauseManu.cs" id="1_aoxra"]
+
+[node name="esc" type="Node2D" node_paths=PackedStringArray("ResumeButton", "RestartButton", "MainmenuButton", "CloseButton", "EscButton", "EscPopup")]
+script = ExtResource("1_aoxra")
+ResumeButton = NodePath("ColorRect/ResumeButton")
+RestartButton = NodePath("ColorRect/RestartButton")
+MainmenuButton = NodePath("ColorRect/MainmenuButton")
+CloseButton = NodePath("ColorRect/CloseButton")
+EscButton = NodePath("EscButton")
+EscPopup = NodePath("ColorRect")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = 205.0
+offset_top = 30.0
+offset_right = 330.0
+offset_bottom = 260.0
+color = Color(9.62615e-07, 0.370922, 0.490857, 1)
+
+[node name="ResumeButton" type="Button" parent="ColorRect"]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 75.0
+offset_right = 64.0
+offset_bottom = 91.0
+scale = Vector2(2, 2)
+
+[node name="RestartButton" type="Button" parent="ColorRect"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 123.0
+offset_right = 62.0
+offset_bottom = 139.0
+scale = Vector2(2, 2)
+
+[node name="CloseButton" type="Button" parent="ColorRect"]
+layout_mode = 1
+offset_right = 10.0
+offset_bottom = 10.0
+scale = Vector2(2, 2)
+
+[node name="MainmenuButton" type="Button" parent="ColorRect"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 169.0
+offset_right = 62.0
+offset_bottom = 185.0
+scale = Vector2(2, 2)
+
+[node name="LabelPaused" type="Label" parent="ColorRect"]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 10.0
+offset_right = 112.0
+offset_bottom = 45.0
+theme_override_font_sizes/font_size = 25
+text = "PAUSED"
+
+[node name="LabelX" type="Label" parent="ColorRect"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = -2.0
+offset_right = 17.0
+offset_bottom = 21.0
+text = "X"
+
+[node name="LabelResume" type="Label" parent="ColorRect"]
+layout_mode = 0
+offset_left = 31.0
+offset_top = 80.0
+offset_right = 95.0
+offset_bottom = 103.0
+text = "RESUME"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LabelRestart" type="Label" parent="ColorRect"]
+layout_mode = 0
+offset_left = 27.0
+offset_top = 127.0
+offset_right = 94.0
+offset_bottom = 150.0
+text = "RESTART"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Labelmainmenu" type="Label" parent="ColorRect"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 174.0
+offset_right = 112.0
+offset_bottom = 197.0
+text = "MAIN MENU"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="EscButton" type="Button" parent="."]
+offset_right = 32.0
+offset_bottom = 32.0
+
+[node name="Label" type="Label" parent="."]
+offset_left = 43.0
+offset_top = 51.0
+offset_right = 73.0
+offset_bottom = 80.0
+text = "ESC"
