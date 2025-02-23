@@ -18,12 +18,9 @@ namespace Transparency
         public override void _Process(double delta)
         {
         }
-        public void CollideWith(Occupier occupier)
+        public void Delete()
         {
-            if (occupier.Type is CellOccupierType.Player)
-            {
-
-            }
+            QueueFree();
         }
     }
 }
