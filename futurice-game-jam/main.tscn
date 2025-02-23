@@ -36,6 +36,8 @@ tile_map_data = PackedByteArray("AAAAAAAAAQADAAAAAAAAAAEAAQADAAAAAAAAAAIAAQADAAA
 tile_set = SubResource("TileSet_g8832")
 
 [node name="Grid" parent="." instance=ExtResource("2_07w3t")]
+_width = 16
+_height = 16
 
 [node name="PlayerArea" parent="." instance=ExtResource("3_ondpg")]
 
@@ -48,5 +50,9 @@ position = Vector2(223, -17)
 [node name="Ambience" parent="." instance=ExtResource("6_pvnwa")]
 
 [node name="Loss" parent="." instance=ExtResource("7_fauax")]
+[node name="haamu" parent="." instance=ExtResource("5_v46hd")]
+z_index = 3
+z_as_relative = false
+position = Vector2(69, 117)
 
 [node name="Win" parent="." instance=ExtResource("8_vhbo0")]

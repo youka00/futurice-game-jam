@@ -1,0 +1,54 @@
+[gd_scene load_steps=5 format=3 uid="uid://byu84srpbrghp"]
+
+[ext_resource type="PackedScene" uid="uid://ctq0mblonc2ae" path="res://main.tscn" id="1_5v4mb"]
+[ext_resource type="Script" path="res://Scripts/HaamuMovement.cs" id="2_0exsi"]
+[ext_resource type="Texture2D" uid="uid://brxle1sbt4vi7" path="res://haamu4.png" id="3_1it41"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ecglp"]
+radius = 17.0294
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Main" parent="." instance=ExtResource("1_5v4mb")]
+
+[node name="PlayerArea" parent="Main" index="1" node_paths=PackedStringArray("characterBody2D", "blue", "green")]
+characterBody2D = NodePath("../haamu/CharacterBody2D")
+blue = NodePath("../haamu/blue")
+green = NodePath("../haamu/green")
+
+[node name="CharacterBody2D" parent="Main/haamu" index="0"]
+visible = false
+
+[node name="blue" type="CharacterBody2D" parent="Main/haamu" index="1"]
+visible = false
+z_index = 3
+position = Vector2(1, 51)
+script = ExtResource("2_0exsi")
+LeftLimit = -100.0
+RightLimit = 50.0
+
+[node name="Haamu4" type="Sprite2D" parent="Main/haamu/blue"]
+scale = Vector2(1, 1.019)
+texture = ExtResource("3_1it41")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Main/haamu/blue"]
+shape = SubResource("CircleShape2D_ecglp")
+
+[node name="green" type="CharacterBody2D" parent="Main/haamu" index="2"]
+visible = false
+z_index = 3
+position = Vector2(1, 109)
+script = ExtResource("2_0exsi")
+LeftLimit = -100.0
+RightLimit = 50.0
+
+[node name="Haamu4" type="Sprite2D" parent="Main/haamu/green"]
+scale = Vector2(1, 1.019)
+texture = ExtResource("3_1it41")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Main/haamu/green"]
+shape = SubResource("CircleShape2D_ecglp")
+
+[editable path="Main"]
+[editable path="Main/PlayerArea"]
+[editable path="Main/haamu"]
