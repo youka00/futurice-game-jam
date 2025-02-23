@@ -24,8 +24,8 @@ namespace Transparency
         public Cell[,] Cells {get {return _cells;}}
         [Export] private int _cellWidth = 32;
         [Export] private int _cellHeight = 32;
-        [Export] private int _width = 9;
-        [Export] private int _height = 9;
+        [Export] private int _width = 16;
+        [Export] private int _height = 16;
         public int Height {get {return _height;}}
         public int Width {get {return _width;}}
 
