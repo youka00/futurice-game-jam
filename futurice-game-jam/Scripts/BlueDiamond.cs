@@ -21,6 +21,8 @@ namespace Transparency
         public void Collect()
         {
             Level.Current.Score++;
+            Cell parent = GetParent() as Cell;
+            parent.Occupiers.Remove(this);
             if (Level.Current.Score > 2)
             {
                 Level.Current.Win();

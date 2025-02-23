@@ -126,9 +126,9 @@ namespace Transparency
                 Move(Vector2I.Left);
                 _footsteps.Play();
                 _lookingAt = _gridPosition + Vector2I.Left;
-                if (!_playerSprite.FlipH)
+                if (_playerSprite.FlipH)
                 {
-                    _playerSprite.FlipH = true;
+                    _playerSprite.FlipH = false;
                 }
 
             }
@@ -137,9 +137,9 @@ namespace Transparency
                 Move(Vector2I.Right);
                 _footsteps.Play();
                 _lookingAt = _gridPosition + Vector2I.Right;
-                if (_playerSprite.FlipH)
+                if (!_playerSprite.FlipH)
                 {
-                    _playerSprite.FlipH = false;
+                    _playerSprite.FlipH = true;
                 }
             }
 
