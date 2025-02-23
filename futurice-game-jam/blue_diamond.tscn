@@ -1,10 +1,11 @@
 [gd_scene load_steps=3 format=3 uid="uid://blgfvsgw46t57"]
 
-[ext_resource type="Texture2D" uid="uid://bstcexrvjdjns" path="res://Art/player1.png" id="1_bxwg0"]
+[ext_resource type="Texture2D" uid="uid://bjh5fyeoj4hth" path="res://Art/gems.png" id="1_w7m06"]
 [ext_resource type="Script" path="res://Scripts/BlueDiamond.cs" id="2_wtrkv"]
 
 [node name="Blue Diamond" type="Sprite2D"]
-modulate = Color(0, 0, 1, 1)
 z_index = 1
-texture = ExtResource("1_bxwg0")
+texture = ExtResource("1_w7m06")
+hframes = 3
+frame = 2
 script = ExtResource("2_wtrkv")

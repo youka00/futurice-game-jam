@@ -20,6 +20,8 @@ namespace Transparency
         }
         public void Delete()
         {
+            Cell parent = GetParent() as Cell;
+            parent.Occupiers.Remove(this);
             QueueFree();
         }
     }

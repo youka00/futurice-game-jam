@@ -29,7 +29,7 @@ namespace Transparency
         private HitUnbreakable _hitUnbreakable = null;
         private BreakStone _breakStone = null;
         private Footsteps _footsteps = null;
-
+        private PlayerSprite _playerSprite = null;
         public enum Direction
         {
             None = 0,
@@ -49,6 +49,7 @@ namespace Transparency
             _hitUnbreakable = GetNode<HitUnbreakable>("Hit Unbreakable");
             _breakStone = GetNode<BreakStone>("Break Stone");
             _footsteps = GetNode<Footsteps>("Footsteps");
+            _playerSprite = GetNode<PlayerSprite>("Player");
             _lookingAt = _gridPosition + Vector2I.Up;
         }
 
@@ -106,31 +107,41 @@ namespace Transparency
 
         private void ReadInput()
         {
-             if (Input.IsActionJustPressed("MoveUp"))
+            if (Input.IsActionJustPressed("MoveUp"))
             {
                 Move(Vector2I.Up);
                 _footsteps.Play();
                 _lookingAt = _gridPosition + Vector2I.Up;
+                _playerSprite.Frame = 1;
             }
             if (Input.IsActionJustPressed("MoveDown"))
             {
                 Move(Vector2I.Down);
                 _footsteps.Play();
                 _lookingAt = _gridPosition + Vector2I.Down;
+                _playerSprite.Frame = 0;
             }
             if (Input.IsActionJustPressed("MoveLeft"))
             {
                 Move(Vector2I.Left);
                 _footsteps.Play();
                 _lookingAt = _gridPosition + Vector2I.Left;
+                if (_playerSprite.FlipH)
+                {
+                    _playerSprite.FlipH = false;
+                }
+
             }
             if (Input.IsActionJustPressed("MoveRight"))
             {
                 Move(Vector2I.Right);
                 _footsteps.Play();
                 _lookingAt = _gridPosition + Vector2I.Right;
+                if (!_playerSprite.FlipH)
+                {
+                    _playerSprite.FlipH = true;
+                }
             }
-
 
             if (Input.IsActionJustPressed("Red")) ChangeLight(_redScene, typeof(RedLight));
             if (Input.IsActionJustPressed("Green")) ChangeLight(_greenScene, typeof(GreenLight));
@@ -189,6 +200,13 @@ namespace Transparency
             {
                 GlobalPosition += direction * Level.Current.CurrentGrid.CellHeight;
                 _gridPosition += direction;
+                foreach (Occupier i in Level.Current.CurrentGrid.Cells[_gridPosition.X, _gridPosition.Y].Occupiers)
+                {
+                    if (i.Type == CellOccupierType.Collectable)
+                    {
+                        i.Collect();
+                    }
+                }
             }
         }
 
