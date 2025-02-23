@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=4 uid="uid://ctq0mblonc2ae"]
+[gd_scene load_steps=24 format=4 uid="uid://ctq0mblonc2ae"]
 
 [ext_resource type="Script" path="res://Scripts/Level.cs" id="1_c8d43"]
 [ext_resource type="PackedScene" uid="uid://dat4qrb2p7qb0" path="res://grid.tscn" id="2_07w3t"]
@@ -8,10 +8,17 @@
 [ext_resource type="PackedScene" uid="uid://ce3ioxnjy7gqj" path="res://esc.tscn" id="4_bfrit"]
 [ext_resource type="PackedScene" path="res://ambience.tscn" id="6_pvnwa"]
 [ext_resource type="PackedScene" path="res://loss.tscn" id="7_fauax"]
+[ext_resource type="Script" path="res://Scripts/esc.cs" id="7_jbvt8"]
+[ext_resource type="Texture2D" uid="uid://dr3bwhilh217y" path="res://esc_menu.png" id="7_y1y6s"]
+[ext_resource type="Texture2D" uid="uid://0asym8br3x50" path="res://Art/kyltti.png" id="8_luxye"]
 [ext_resource type="PackedScene" path="res://win.tscn" id="8_vhbo0"]
 [ext_resource type="PackedScene" uid="uid://bi3ocurdyxrk2" path="res://haamu.tscn" id="9_2bpph"]
+[ext_resource type="Texture2D" uid="uid://cw8gy5kptkvwh" path="res://Art/volume_off.png" id="9_lavgk"]
+[ext_resource type="Texture2D" uid="uid://bp71y6bljmn3k" path="res://Art/volume_max.png" id="10_6fgxr"]
 [ext_resource type="Script" path="res://Scripts/HaamuMovement.cs" id="10_s4yg8"]
-[ext_resource type="Texture2D" uid="uid://brxle1sbt4vi7" path="res://haamu4.png" id="11_cbgh5"]
+[ext_resource type="Texture2D" uid="uid://ceut2dar5xvjm" path="res://pause.png" id="12_b4mq3"]
+[ext_resource type="Texture2D" uid="uid://froptx7vlo26" path="res://Art/Ghosts/haamu_green.png" id="12_gdqva"]
+[ext_resource type="Texture2D" uid="uid://db6c1ot57yp0y" path="res://Art/Ghosts/haamu_blue.png" id="13_aantv"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pnrvm"]
 texture = ExtResource("2_vhtfl")
@@ -71,14 +78,140 @@ green = NodePath("../haamu/green")
 [node name="Camera2D" type="Camera2D" parent="."]
 offset = Vector2(120, 128)
 
-[node name="esc" parent="." instance=ExtResource("4_bfrit")]
+[node name="esc" parent="." node_paths=PackedStringArray("MusicButton", "MusicPlayer", "volume_max", "volume_out") instance=ExtResource("4_bfrit")]
 position = Vector2(223, -17)
+script = ExtResource("7_jbvt8")
+MusicButton = NodePath("ColorRect/MusicButton")
+MusicPlayer = NodePath("../Ambience")
+volume_max = NodePath("ColorRect/MusicButton/MusicOn")
+volume_out = NodePath("ColorRect/MusicButton/MusicOff")
+
+[node name="ColorRect" parent="esc" index="0"]
+visible = false
+offset_left = -161.0
+offset_top = 28.0
+offset_right = -61.0
+offset_bottom = 248.0
+scale = Vector2(0.814616, 0.930583)
+color = Color(1, 1, 1, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="esc/ColorRect" index="0"]
+position = Vector2(56.4683, 112.832)
+scale = Vector2(1.87636, 1.21588)
+texture = ExtResource("7_y1y6s")
+
+[node name="ResumeButton" parent="esc/ColorRect" index="1"]
+offset_left = 11.0482
+offset_top = 71.9978
+offset_right = 60.0482
+offset_bottom = 87.9978
+
+[node name="Sprite2D" type="Sprite2D" parent="esc/ColorRect/ResumeButton" index="0"]
+position = Vector2(24.2446, 8.05946)
+scale = Vector2(0.621459, 0.5)
+texture = ExtResource("8_luxye")
+
+[node name="RestartButton" parent="esc/ColorRect" index="2"]
+offset_left = 19.6412
+offset_top = 123.578
+offset_right = 58.6412
+offset_bottom = 139.578
+
+[node name="Sprite2D2" type="Sprite2D" parent="esc/ColorRect/RestartButton" index="0"]
+position = Vector2(19.8031, 8.34867)
+scale = Vector2(0.621459, 0.5)
+texture = ExtResource("8_luxye")
+
+[node name="CloseButton" parent="esc/ColorRect" index="3"]
+visible = false
+
+[node name="MainmenuButton" parent="esc/ColorRect" index="4"]
+offset_left = 11.0482
+offset_top = 170.861
+offset_right = 57.0482
+offset_bottom = 186.861
+
+[node name="Sprite2D3" type="Sprite2D" parent="esc/ColorRect/MainmenuButton" index="0"]
+position = Vector2(24.5515, 7.52216)
+scale = Vector2(0.621459, 0.5)
+texture = ExtResource("8_luxye")
+
+[node name="LabelPaused" parent="esc/ColorRect" index="5"]
+offset_left = 15.9584
+offset_top = 23.6411
+offset_right = 96.9585
+offset_bottom = 53.6411
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 21
+
+[node name="LabelX" parent="esc/ColorRect" index="6"]
+visible = false
+
+[node name="LabelResume" parent="esc/ColorRect" index="7"]
+offset_left = 27.0066
+offset_top = 76.2962
+offset_right = 91.0066
+offset_bottom = 99.2962
+
+[node name="LabelRestart" parent="esc/ColorRect" index="8"]
+offset_left = 25.779
+offset_top = 128.951
+offset_right = 92.779
+offset_bottom = 151.951
+
+[node name="Labelmainmenu" parent="esc/ColorRect" index="9"]
+offset_left = 11.0482
+offset_top = 174.084
+offset_right = 107.048
+offset_bottom = 197.084
+
+[node name="MusicButton" type="Button" parent="esc/ColorRect" index="10"]
+layout_mode = 0
+offset_left = 11.0482
+offset_top = -6.44757
+offset_right = 19.0482
+offset_bottom = 1.55243
+scale = Vector2(4.12153, 3.59468)
+action_mode = 0
+
+[node name="MusicOff" type="Sprite2D" parent="esc/ColorRect/MusicButton"]
+visible = false
+position = Vector2(3.94992, 3.83842)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("9_lavgk")
+
+[node name="MusicOn" type="Sprite2D" parent="esc/ColorRect/MusicButton"]
+visible = false
+position = Vector2(3.94992, 3.83842)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("10_6fgxr")
+
+[node name="EscButton" parent="esc" index="1"]
+offset_left = 121.0
+offset_top = 2.0
+offset_right = 153.0
+offset_bottom = 34.0
+
+[node name="Sprite2D" type="Sprite2D" parent="esc/EscButton" index="0"]
+position = Vector2(16, 15)
+texture = ExtResource("12_b4mq3")
+
+[node name="Label" parent="esc" index="2"]
+offset_left = 122.0
+offset_top = 4.0
+offset_right = 152.0
+offset_bottom = 33.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 
 [node name="Ambience" parent="." instance=ExtResource("6_pvnwa")]
+bus = &"Music"
 
 [node name="Loss" parent="." instance=ExtResource("7_fauax")]
+bus = &"Music"
 
 [node name="Win" parent="." instance=ExtResource("8_vhbo0")]
+bus = &"Music"
 
 [node name="haamu" parent="." instance=ExtResource("9_2bpph")]
 position = Vector2(-4, 103)
@@ -92,7 +225,7 @@ RightLimit = 50.0
 
 [node name="Haamu4" type="Sprite2D" parent="haamu/green"]
 scale = Vector2(1, 1.019)
-texture = ExtResource("11_cbgh5")
+texture = ExtResource("12_gdqva")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="haamu/green"]
 shape = SubResource("CircleShape2D_ecglp")
@@ -106,10 +239,11 @@ RightLimit = 50.0
 
 [node name="Haamu4" type="Sprite2D" parent="haamu/blue"]
 scale = Vector2(1, 1.019)
-texture = ExtResource("11_cbgh5")
+texture = ExtResource("13_aantv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="haamu/blue"]
 shape = SubResource("CircleShape2D_ecglp")
 
 [editable path="PlayerArea"]
+[editable path="esc"]
 [editable path="haamu"]

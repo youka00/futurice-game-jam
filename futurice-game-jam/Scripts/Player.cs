@@ -89,6 +89,7 @@ namespace Transparency
                     green.Visible = greenLight.IsInLightArea(green.GlobalPosition);
                     blue.Visible = false;
                     characterBody2D.Visible = false;
+
                 }
                 else if (_light is RedLight redLight)
                 {

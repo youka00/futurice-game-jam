@@ -10,6 +10,8 @@ namespace Transparency
         [Signal]
         public delegate void GhostExitedEventHandler(CharacterBody2D characterBody2D);
 
+        [Signal] public delegate void GreenDiamondEnteredEventHandler(CharacterBody2D Greendiamond);
+
         private Area2D _area; // Reference to Area2D
 
         public override void _Ready()
@@ -43,5 +45,7 @@ namespace Transparency
                 EmitSignal(nameof(GhostExited), body);
             }
         }
+
+
     }
 }
