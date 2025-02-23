@@ -29,7 +29,7 @@ public partial class HaamuMovement : CharacterBody2D
 	}
     private bool IsEqualApprox(Vector2 i, Vector2 j)
     {
-        if (Mathf.Abs(i.X - j.X) > 0.05 && Mathf.Abs(i.Y - j.Y) > 0.05)
+        if (Mathf.Abs(i.X - j.X) > 1 && Mathf.Abs(i.Y - j.Y) > 1)
         {
             return false;
         }

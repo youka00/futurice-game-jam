@@ -1,11 +1,10 @@
 [gd_scene load_steps=4 format=3 uid="uid://dpiwtgr14n4os"]
 
 [ext_resource type="Script" path="res://Scripts/Mainmenu.cs" id="1_m7cny"]
-[ext_resource type="PackedScene" uid="uid://6hy1m1knp4f3" path="res://main_menu_music.tscn" id="2_itxn1"]
 [ext_resource type="Texture2D" uid="uid://0asym8br3x50" path="res://Art/kyltti.png" id="2_fxhi7"]
-[ext_resource type="PackedScene" path="res://main_menu_music.tscn" id="2_itxn1"]
+[ext_resource type="PackedScene" uid="uid://6hy1m1knp4f3" path="res://main_menu_music.tscn" id="2_itxn1"]
 
-[node name="Mainmenu" type="Node2D" node_paths=PackedStringArray("PlayButton", "CreditsButton", "QuitButton", "HowplayButton", "CreditsPopup", "HowtoplayPopup", "CloseCreditsButton", "CloseHowtoplayButton", "MusicButton", "MusicPlayer")]
+[node name="Mainmenu" type="Node2D" node_paths=PackedStringArray("PlayButton", "CreditsButton", "QuitButton", "HowplayButton", "CreditsPopup", "HowtoplayPopup", "CloseCreditsButton", "CloseHowtoplayButton")]
 position = Vector2(107, 66)
 scale = Vector2(0.477671, 0.48246)
 script = ExtResource("1_m7cny")
@@ -17,8 +16,6 @@ CreditsPopup = NodePath("CreditsPopup")
 HowtoplayPopup = NodePath("howtoplayPopup")
 CloseCreditsButton = NodePath("CreditsPopup/CloseCreditsButton")
 CloseHowtoplayButton = NodePath("howtoplayPopup/CloseHowtoplayButton")
-MusicButton = NodePath("MusicButton")
-MusicPlayer = NodePath("Main Menu Music")
 
 [node name="PlayButton" type="Button" parent="."]
 offset_left = 192.601
@@ -127,7 +124,7 @@ texture = ExtResource("2_fxhi7")
 [node name="Quit" type="Label" parent="QuitButton"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = -0.0590056
+anchor_left = -0.0590057
 anchor_top = -0.0370104
 anchor_right = -0.0590057
 anchor_bottom = -0.0370104
@@ -205,7 +202,6 @@ text = "Close
 "
 
 [node name="Main Menu Music" parent="." instance=ExtResource("2_itxn1")]
-bus = &"Music"
 
 [node name="MusicButton" type="Button" parent="."]
 offset_left = 757.844
