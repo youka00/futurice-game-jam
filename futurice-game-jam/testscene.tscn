@@ -1,4 +1,4 @@
-[gd_scene load_steps=2 format=3 uid="uid://473cuwxv378u"]
+[gd_scene load_steps=2 format=3 uid="uid://byu84srpbrghp"]
 
 [ext_resource type="PackedScene" uid="uid://ctq0mblonc2ae" path="res://main.tscn" id="1_5v4mb"]
 
@@ -8,12 +8,15 @@
 
 [node name="CharacterBody2D" parent="Main/haamu" index="0"]
 position = Vector2(19, 40)
+_destination = Vector2(0, 0)
 
 [node name="green" parent="Main/haamu" index="1"]
 position = Vector2(18, -54)
+_destination = Vector2(0, 0)
 
 [node name="blue" parent="Main/haamu" index="2"]
 position = Vector2(18, 123)
+_destination = Vector2(0, 0)
 
 [editable path="Main"]
 [editable path="Main/PlayerArea"]
