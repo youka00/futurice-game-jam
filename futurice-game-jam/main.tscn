@@ -65,12 +65,16 @@ position = Vector2(223, -17)
 [node name="haamu" parent="." instance=ExtResource("9_2bpph")]
 position = Vector2(-4, 103)
 
+[node name="CharacterBody2D" parent="haamu" index="0"]
+_destination = Vector2(234, 143)
+
 [node name="green" type="CharacterBody2D" parent="haamu"]
 z_index = 3
 position = Vector2(251, -44)
 script = ExtResource("10_s4yg8")
 LeftLimit = -100.0
 RightLimit = 50.0
+_destination = Vector2(0, 224)
 
 [node name="Haamu4" type="Sprite2D" parent="haamu/green"]
 scale = Vector2(1, 1.019)
@@ -85,6 +89,7 @@ position = Vector2(249, 137)
 script = ExtResource("10_s4yg8")
 LeftLimit = -100.0
 RightLimit = 50.0
+_destination = Vector2(0, 224)
 
 [node name="Haamu4" type="Sprite2D" parent="haamu/blue"]
 scale = Vector2(1, 1.019)

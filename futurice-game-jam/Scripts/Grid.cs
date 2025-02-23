@@ -108,6 +108,12 @@ namespace Transparency
                 break;
             }
         }
+        public Cell GetRandomCell()
+        {
+            int i = GD.RandRange(0, _width - 1);
+            int j = GD.RandRange(0, _height - 1);
+            return _cells[i, j];
+        }
         // ÄLÄ KATO TÄNNE TÄÄL ON PURKKAA SILMÄNKANTAMATTOMIIN
         private void MakePath()
         {
