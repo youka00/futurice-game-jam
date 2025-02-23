@@ -6,12 +6,12 @@
 [ext_resource type="Texture2D" uid="uid://dsi1l2rlv1kcr" path="res://Art/game_atlas.png" id="2_vhtfl"]
 [ext_resource type="PackedScene" uid="uid://crr2ap0ngx2fn" path="res://player.tscn" id="3_ondpg"]
 [ext_resource type="PackedScene" uid="uid://ce3ioxnjy7gqj" path="res://esc.tscn" id="4_bfrit"]
-[ext_resource type="PackedScene" path="res://ambience.tscn" id="6_pvnwa"]
-[ext_resource type="PackedScene" path="res://loss.tscn" id="7_fauax"]
+[ext_resource type="PackedScene" uid="uid://dsqjxre4sux3d" path="res://ambience.tscn" id="6_pvnwa"]
+[ext_resource type="PackedScene" uid="uid://g8gjrbb3fipq" path="res://loss.tscn" id="7_fauax"]
 [ext_resource type="Script" path="res://Scripts/esc.cs" id="7_jbvt8"]
 [ext_resource type="Texture2D" uid="uid://dr3bwhilh217y" path="res://esc_menu.png" id="7_y1y6s"]
 [ext_resource type="Texture2D" uid="uid://0asym8br3x50" path="res://Art/kyltti.png" id="8_luxye"]
-[ext_resource type="PackedScene" path="res://win.tscn" id="8_vhbo0"]
+[ext_resource type="PackedScene" uid="uid://b3pr345ss1l5l" path="res://win.tscn" id="8_vhbo0"]
 [ext_resource type="PackedScene" uid="uid://bi3ocurdyxrk2" path="res://haamu.tscn" id="9_2bpph"]
 [ext_resource type="Texture2D" uid="uid://cw8gy5kptkvwh" path="res://Art/volume_off.png" id="9_lavgk"]
 [ext_resource type="Texture2D" uid="uid://bp71y6bljmn3k" path="res://Art/volume_max.png" id="10_6fgxr"]
@@ -78,13 +78,9 @@ green = NodePath("../haamu/green")
 [node name="Camera2D" type="Camera2D" parent="."]
 offset = Vector2(120, 128)
 
-[node name="esc" parent="." node_paths=PackedStringArray("MusicButton", "MusicPlayer", "volume_max", "volume_out") instance=ExtResource("4_bfrit")]
+[node name="esc" parent="." instance=ExtResource("4_bfrit")]
 position = Vector2(223, -17)
 script = ExtResource("7_jbvt8")
-MusicButton = NodePath("ColorRect/MusicButton")
-MusicPlayer = NodePath("../Ambience")
-volume_max = NodePath("ColorRect/MusicButton/MusicOn")
-volume_out = NodePath("ColorRect/MusicButton/MusicOff")
 
 [node name="ColorRect" parent="esc" index="0"]
 visible = false
