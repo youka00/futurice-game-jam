@@ -36,6 +36,8 @@ tile_map_data = PackedByteArray("AAAAAAAAAQADAAAAAAAAAAEAAQADAAAAAAAAAAIAAQADAAA
 tile_set = SubResource("TileSet_g8832")
 
 [node name="Grid" parent="." instance=ExtResource("2_07w3t")]
+_width = 9
+_height = 9
 
 [node name="PlayerArea" parent="." instance=ExtResource("3_ondpg")]
 
