@@ -24,6 +24,12 @@ window/size/viewport_height=288
 
 project/assembly_name="Futurice Game Jam"
 
+[global_group]
+
+red=""
+green=""
+blue=""
+
 [input]
 
 MoveUp={

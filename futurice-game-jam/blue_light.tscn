@@ -1,9 +1,21 @@
-[gd_scene load_steps=3 format=3 uid="uid://c4211pw07445l"]
+[gd_scene load_steps=4 format=3 uid="uid://c5ysp72jtaeuk"]
 
 [ext_resource type="Texture2D" uid="uid://36g155tesp0h" path="res://Art/glow.png" id="1_7ykci"]
 [ext_resource type="Script" path="res://Scripts/BlueLight.cs" id="2_uyamu"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5tyrb"]
+radius = 62.0
+height = 134.0
 
 [node name="Blue Light" type="Sprite2D"]
 modulate = Color(0, 0.551308, 0.934721, 1)
 texture = ExtResource("1_7ykci")
 script = ExtResource("2_uyamu")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CapsuleShape2D_5tyrb")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
