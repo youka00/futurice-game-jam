@@ -25,6 +25,10 @@ namespace Transparency
         private PackedScene _greenScene = null;
         private PackedScene _blueScene = null;
         private Light _light = null;
+        private Vector2I _lookingAt = Vector2I.Zero;
+        private HitUnbreakable _hitUnbreakable = null;
+        private BreakStone _breakStone = null;
+        private Footsteps _footsteps = null;
 
         public enum Direction
         {
@@ -37,9 +41,15 @@ namespace Transparency
 
         public override void _Ready()
         {
+            _gridPosition = new Vector2I(4,4);
+            GlobalPosition = new Vector2(_gridPosition.X * 32, _gridPosition.Y * 32);
             _redScene = ResourceLoader.Load<PackedScene>(_redScenePath);
             _blueScene = ResourceLoader.Load<PackedScene>(_blueScenePath);
             _greenScene = ResourceLoader.Load<PackedScene>(_greenScenePath);
+            _hitUnbreakable = GetNode<HitUnbreakable>("Hit Unbreakable");
+            _breakStone = GetNode<BreakStone>("Break Stone");
+            _footsteps = GetNode<Footsteps>("Footsteps");
+            _lookingAt = _gridPosition + Vector2I.Up;
         }
 
         public override void _Process(double delta)
@@ -50,6 +60,29 @@ namespace Transparency
 
         private bool IsInRange()
         {
+            if (Input.IsActionJustPressed("MoveUp"))
+            {
+                Move(Vector2I.Up);
+                _footsteps.Play();
+                _lookingAt = _gridPosition + Vector2I.Up;
+            }
+            if (Input.IsActionJustPressed("MoveDown"))
+            {
+                Move(Vector2I.Down);
+                _footsteps.Play();
+                _lookingAt = _gridPosition + Vector2I.Down;
+            }
+            if (Input.IsActionJustPressed("MoveLeft"))
+            {
+                Move(Vector2I.Left);
+                _footsteps.Play();
+                _lookingAt = _gridPosition + Vector2I.Left;
+            }
+            if (Input.IsActionJustPressed("MoveRight"))
+            {
+                Move(Vector2I.Right);
+                _footsteps.Play();
+                _lookingAt = _gridPosition + Vector2I.Right;
             return characterBody2D.GlobalPosition.DistanceTo(GlobalPosition) <= 0 ||
                    blue.GlobalPosition.DistanceTo(GlobalPosition) <= 0 ||
                    green.GlobalPosition.DistanceTo(GlobalPosition) <= 0;
@@ -62,6 +95,7 @@ namespace Transparency
                 blue.Visible = true;
                 green.Visible = true;
                 characterBody2D.Visible = true;
+
             }
             else
             {
@@ -133,8 +167,13 @@ namespace Transparency
                     greenLight.Connect("GhostExited", Callable.From<Node2D>(OnGhostExitedGreenLight));
                 }
             }
+            if (Input.IsActionJustPressed("Mine"))
+            {
+                Mine(_lookingAt);
+            }
 
             UpdateGhostVisibility(); // Immediately update ghost visibility
+
         }
 
         private void Move(Vector2I direction)
@@ -167,6 +206,27 @@ namespace Transparency
                 case CellOccupierType.Obstacle: break;
             }
         }
+        public void Mine(Vector2I breakThis)
+        {
+            if (breakThis.X < 0 || breakThis.Y < 0 || breakThis.X > Level.Current.CurrentGrid.Width - 1 || breakThis.Y > Level.Current.CurrentGrid.Height - 1)
+            {
+                return;
+            }
+            Cell cell = Level.Current.CurrentGrid.Cells[breakThis.X, breakThis.Y];
+            foreach (Occupier i in cell.Occupiers)
+            {
+                if (i.Type == CellOccupierType.Mineable)
+                {
+                    i.Delete();
+                    _breakStone.Play();
+                    break;
+                }
+                else if (i.Type == CellOccupierType.Obstacle)
+                {
+                    _hitUnbreakable.Play();
+                    break;
+                }
+            }
 
         // Ensure Signal Methods Exist
         private void OnGhostEnteredRedLight(Node2D haamu)

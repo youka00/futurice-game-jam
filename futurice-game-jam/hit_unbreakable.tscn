@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cqrbdedyfnpn8"]
+
+[ext_resource type="AudioStream" uid="uid://c58gvnl30k1ky" path="res://Music/hit_unbreakable.ogg" id="1_cdsjg"]
+
+[node name="Hit Unbreakable" type="AudioStreamPlayer"]
+stream = ExtResource("1_cdsjg")

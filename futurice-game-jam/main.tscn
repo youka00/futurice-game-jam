@@ -1,13 +1,39 @@
-[gd_scene load_steps=6 format=3 uid="uid://ctq0mblonc2ae"]
+[gd_scene load_steps=11 format=4 uid="uid://ctq0mblonc2ae"]
 
 [ext_resource type="Script" path="res://Scripts/Level.cs" id="1_c8d43"]
 [ext_resource type="PackedScene" uid="uid://dat4qrb2p7qb0" path="res://grid.tscn" id="2_07w3t"]
+[ext_resource type="Texture2D" uid="uid://crs4yhv4wqb3k" path="res://game_atlas.png" id="2_b6qt0"]
 [ext_resource type="PackedScene" uid="uid://crr2ap0ngx2fn" path="res://player.tscn" id="3_ondpg"]
 [ext_resource type="PackedScene" uid="uid://ce3ioxnjy7gqj" path="res://esc.tscn" id="4_bfrit"]
-[ext_resource type="PackedScene" uid="uid://bi3ocurdyxrk2" path="res://haamu.tscn" id="5_v46hd"]
+[ext_resource type="PackedScene" uid="uid://dsqjxre4sux3d" path="res://ambience.tscn" id="6_pvnwa"]
+[ext_resource type="PackedScene" uid="uid://g8gjrbb3fipq" path="res://loss.tscn" id="7_fauax"]
+[ext_resource type="PackedScene" uid="uid://b3pr345ss1l5l" path="res://win.tscn" id="8_vhbo0"]
 
-[node name="Main" type="Node2D"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_378xu"]
+texture = ExtResource("2_b6qt0")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_g8832"]
+tile_size = Vector2i(32, 32)
+sources/1 = SubResource("TileSetAtlasSource_378xu")
+
+[node name="Main" type="Node2D" node_paths=PackedStringArray("_ambience")]
 script = ExtResource("1_c8d43")
+_ambience = NodePath("Ambience")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+z_index = -1
+position = Vector2(-16, -16)
+tile_map_data = PackedByteArray("AAAAAAAAAQADAAAAAAAAAAEAAQADAAAAAAAAAAIAAQADAAAAAAAAAAMAAQADAAAAAAAAAAQAAQADAAAAAAAAAAUAAQADAAAAAAAAAAYAAQADAAAAAAAAAAcAAQADAAAAAAAAAAgAAQADAAAAAAABAAAAAQADAAAAAAABAAEAAQADAAAAAAABAAIAAQADAAAAAAABAAMAAQADAAAAAAABAAQAAQADAAAAAAABAAUAAQADAAAAAAABAAYAAQADAAAAAAABAAcAAQADAAAAAAABAAgAAQADAAAAAAACAAAAAQADAAAAAAACAAEAAQADAAAAAAACAAIAAQADAAAAAAACAAMAAQADAAAAAAACAAQAAQADAAAAAAACAAUAAQADAAAAAAACAAYAAQADAAAAAAACAAcAAQADAAAAAAACAAgAAQADAAAAAAADAAAAAQADAAAAAAADAAEAAQADAAAAAAADAAIAAQADAAAAAAADAAMAAQADAAAAAAADAAQAAQADAAAAAAADAAUAAQADAAAAAAADAAYAAQADAAAAAAADAAcAAQADAAAAAAADAAgAAQADAAAAAAAEAAAAAQADAAAAAAAEAAEAAQADAAAAAAAEAAIAAQADAAAAAAAEAAMAAQADAAAAAAAEAAQAAQADAAAAAAAEAAUAAQADAAAAAAAEAAYAAQADAAAAAAAEAAcAAQADAAAAAAAEAAgAAQADAAAAAAAFAAAAAQADAAAAAAAFAAEAAQADAAAAAAAFAAIAAQADAAAAAAAFAAMAAQADAAAAAAAFAAQAAQADAAAAAAAFAAUAAQADAAAAAAAFAAYAAQADAAAAAAAFAAcAAQADAAAAAAAFAAgAAQADAAAAAAAGAAAAAQADAAAAAAAGAAEAAQADAAAAAAAGAAIAAQADAAAAAAAGAAMAAQADAAAAAAAGAAQAAQADAAAAAAAGAAUAAQADAAAAAAAGAAYAAQADAAAAAAAGAAcAAQADAAAAAAAGAAgAAQADAAAAAAAHAAAAAQADAAAAAAAHAAEAAQADAAAAAAAHAAIAAQADAAAAAAAHAAMAAQADAAAAAAAHAAQAAQADAAAAAAAHAAUAAQADAAAAAAAHAAYAAQADAAAAAAAHAAcAAQADAAAAAAAHAAgAAQADAAAAAAAIAAAAAQADAAAAAAAIAAEAAQADAAAAAAAIAAIAAQADAAAAAAAIAAMAAQADAAAAAAAIAAQAAQADAAAAAAAIAAUAAQADAAAAAAAIAAYAAQADAAAAAAAIAAcAAQADAAAAAAAIAAgAAQADAAAAAAA=")
+tile_set = SubResource("TileSet_g8832")
 
 [node name="Grid" parent="." instance=ExtResource("2_07w3t")]
 _width = 16
@@ -16,13 +42,17 @@ _height = 16
 [node name="PlayerArea" parent="." instance=ExtResource("3_ondpg")]
 
 [node name="Camera2D" type="Camera2D" parent="."]
+offset = Vector2(120, 128)
 
 [node name="esc" parent="." instance=ExtResource("4_bfrit")]
 position = Vector2(223, -17)
 
+[node name="Ambience" parent="." instance=ExtResource("6_pvnwa")]
+
+[node name="Loss" parent="." instance=ExtResource("7_fauax")]
 [node name="haamu" parent="." instance=ExtResource("5_v46hd")]
 z_index = 3
 z_as_relative = false
 position = Vector2(69, 117)
 
-[editable path="PlayerArea"]
+[node name="Win" parent="." instance=ExtResource("8_vhbo0")]

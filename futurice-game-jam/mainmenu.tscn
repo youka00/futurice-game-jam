@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://dpiwtgr14n4os"]
+[gd_scene load_steps=3 format=3 uid="uid://dpiwtgr14n4os"]
 
 [ext_resource type="Script" path="res://Scripts/Mainmenu.cs" id="1_m7cny"]
+[ext_resource type="PackedScene" uid="uid://6hy1m1knp4f3" path="res://main_menu_music.tscn" id="2_itxn1"]
 
 [node name="Mainmenu" type="Node2D" node_paths=PackedStringArray("PlayButton", "CreditsButton", "QuitButton", "HowplayButton", "CreditsPopup", "HowtoplayPopup", "CloseCreditsButton", "CloseHowtoplayButton")]
 script = ExtResource("1_m7cny")
@@ -141,3 +142,5 @@ offset_right = 50.0
 offset_bottom = 31.0
 text = "Close
 "
+
+[node name="Main Menu Music" parent="." instance=ExtResource("2_itxn1")]
